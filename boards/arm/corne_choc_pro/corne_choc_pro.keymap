@@ -53,12 +53,12 @@
             >;
         };
 
-        temp-symbol-backup {
-            display-name = "EXTRA 2";
+        extra_layer_2 {
+            display-name = "temp-symbol-backup";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N3     &kp RA(N4)  &kp RA(EQUAL)  &trans  &kp RA(N8)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4     &kp KP_N5   &kp MINUS      &trans  &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp GRAVE  &kp RA(N5)  &kp RA(MINUS)  &trans  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N3     &kp RA(N4)  &kp RA(EQUAL)  &kp LS(DOT)  &kp RA(N8)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4     &kp KP_N5   &kp MINUS      &trans       &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp GRAVE  &kp RA(N5)  &kp RA(MINUS)  &trans       &trans      &trans
                         &none   &trans  &trans                  &trans     &trans      &none
             >;
         };
