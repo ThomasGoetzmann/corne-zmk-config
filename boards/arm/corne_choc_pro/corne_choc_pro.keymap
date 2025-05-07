@@ -79,7 +79,7 @@
 
 // Additional special characters
     #define F_EXCL         LS(N1)  // ! requires shift on 1/& key
-    #define F_GRAVE        N7      // ` (grave accent) is a dead key
+#define F_GRAVE        GRAVE   // ` (grave accent)
 #define F_CIRCUMFLEX   LBKT    // ^ (circumflex) is a dead key
 #define F_DIAERESIS    LS(LBKT) // ¨ (diaeresis) requires shift on ^ key
 #define F_DEGREE       LS(RBKT) // ° requires shift on $ key
@@ -92,7 +92,6 @@
 #define F_GREATER_THAN LS(NON_US_BSLH) // > requires shift on < key
 
 // AltGr combinations (Right Alt + key)
-#define F_TILDE_DEAD   RA(N2)  // ~ as a dead key
 #define F_HASH         RA(N3)  // #
 #define F_EURO         RA(E)   // €
 #define F_BACKSLASH    RA(N8)  // backslash
@@ -133,7 +132,7 @@
         bindings = <
         &trans  &kp F_AT &none           &kp F_EURO        &kp F_PLUS   &none  &trans   &trans  &kp F_DQUOTE  &kp F_LBRACKET  &kp F_RBRACKET  &kp F_LESS_THAN  &kp F_GREATER_THAN  &kp BSPC
         &trans  &none    &kp F_DOLLAR    &kp F_UNDERSCORE  &kp F_MINUS  &none  &trans   &trans  &kp F_SQUOTE  &kp F_LPAR      &kp F_RPAR      &kp F_SLASH      &kp F_BACKSLASH     &kp F_PERCENT
-        &trans  &none    &kp F_ASTERISK  &kp F_HASH        &kp F_EQUAL  &none                   &kp F_GRAVE   &kp F_LBRACE    &kp F_RBRACE    &kp F_AMPERSAND  &kp F_PIPE          &kp F_TILDE_DEAD
+        &trans  &none    &kp F_ASTERISK  &kp F_HASH        &kp F_EQUAL  &none                   &kp F_GRAVE   &kp F_LBRACE    &kp F_RBRACE    &kp F_AMPERSAND  &kp F_PIPE          &kp TILDE
                                                      &none   &trans   &trans                                &trans   &trans   &none
         >;
     };
