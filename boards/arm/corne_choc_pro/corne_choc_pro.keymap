@@ -71,7 +71,7 @@
 #define F_EQUAL        EQUAL   // = is on = key but different shift state
 #define F_CARET        LBKT    // ^ is on [ key in QWERTY
 #define F_DOLLAR       RBKT    // $ is on ] key in QWERTY
-#define F_UGRAVE       BSLH    // ù is on \ key in QWERTY
+#define F_UGRAVE       BSLH    // ù is on backslash key in QWERTY
 #define F_ASTERISK     RBKT    // * requires shift on $ key
 #define F_PERCENT      GRAVE   // % is on ` key in QWERTY
 
@@ -82,7 +82,7 @@
 #define F_EURO         LS(N4)  // € requires AltGr on E key
 #define F_PIPE         LS(N6)  // | requires AltGr on 6 key
 #define F_GRAVE        N7      // ` (grave accent) is a dead key
-#define F_BACKSLASH    LS(N8)  // \ requires AltGr on 8 key
+#define F_BACKSLASH    LS(N8)  // backslash requires AltGr on 8 key
 #define F_CIRCUMFLEX   LBKT    // ^ (circumflex) is a dead key
 #define F_DIAERESIS    LS(LBKT) // ¨ (diaeresis) requires shift on ^ key
 #define F_DEGREE       LS(RBKT) // ° requires shift on $ key
@@ -99,7 +99,7 @@
 #define F_TILDE_DEAD   RA(N2)  // ~ as a dead key
 #define F_HASH_SIGN    RA(N3)  // #
 #define F_EURO_SIGN    RA(E)   // €
-#define F_BACKSLASH    RA(N8)  // \
+#define F_BACKSLASH    RA(N8)  // backslash
 #define F_AT_SIGN      RA(N0)  // @
 #define F_LBRACE       RA(N4)  // {
 #define F_RBRACE       RA(EQUAL) // }
