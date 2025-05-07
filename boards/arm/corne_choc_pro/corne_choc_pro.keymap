@@ -55,16 +55,16 @@
 #define F_AGRAVE       N0      // à is on 0 key
 
 // Number row with shift
-#define F_1     N1      // 1 requires shift on & key
-#define F_2     N2      // 2 requires shift on é key
-#define F_3     N3      // 3 requires shift on " key
-#define F_4     N4      // 4 requires shift on ' key
-#define F_5     N5      // 5 requires shift on ( key
-#define F_6     N6      // 6 requires shift on - key
-#define F_7     N7      // 7 requires shift on è key
-#define F_8     N8      // 8 requires shift on _ key
-#define F_9     N9      // 9 requires shift on ç key
-#define F_0     N0      // 0 requires shift on à key
+#define F_1     LS(N1)      // 1 requires shift on & key
+#define F_2     LS(N2)      // 2 requires shift on é key
+#define F_3     LS(N3)      // 3 requires shift on " key
+#define F_4     LS(N4)      // 4 requires shift on ' key
+#define F_5     LS(N5)      // 5 requires shift on ( key
+#define F_6     LS(N6)      // 6 requires shift on - key
+#define F_7     LS(N7)      // 7 requires shift on è key
+#define F_8     LS(N8)      // 8 requires shift on _ key
+#define F_9     LS(N9)      // 9 requires shift on ç key
+#define F_0     LS(N0)      // 0 requires shift on à key
 
 // Special characters on the right side
 #define F_RPAR         MINUS   // ) is on - key in QWERTY
@@ -112,35 +112,26 @@
     keymap {
         compatible = "zmk,keymap";
 
-//         default_layer {
-//             display-name = "keys";
-//             bindings = <
-// &kp ESC    &kp Q  &kp W  &kp E  &kp R  &kp T      &kp LCTRL  &kp RCTRL  &kp Y    &kp U     &kp I      &kp O    &kp P     &kp DEL
-// &kp TAB    &kp A  &kp S  &kp D  &kp F  &kp G      &kp LALT   &kp RALT   &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-// &sk LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B                            &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &rgb_ug RGB_TOG
-//                          &mo 1  &mo 2  &kp SPACE                        &kp RET  &kp BSPC  &sl 3
-//             >;
-//         };
 
 default_layer {
     display-name = "keys";
     bindings = <
 &kp ESC    &kp F_A  &kp F_Z  &kp F_E  &kp F_R  &kp F_T      &kp LCTRL  &kp RCTRL  &kp F_Y    &kp F_U     &kp F_I      &kp F_O    &kp F_P     &kp DEL
-&kp TAB    &kp F_Q  &kp F_S  &kp F_D  &kp F_F  &kp F_G      &kp LALT   &kp RALT   &kp F_H    &kp F_J     &kp F_K      &kp F_L    &kp F_M     &kp F_UGRAVE
-&sk LSHFT  &kp F_W  &kp F_X  &kp F_C  &kp F_V  &kp F_B                            &kp F_N    &kp F_COMMA  &kp F_DOT    &kp F_SLASH  &kp F_EQUAL  &rgb_ug RGB_TOG
+&kp TAB    &kp F_Q  &kp F_S  &kp F_D  &kp F_F  &kp F_G      &kp LALT   &kp RALT   &kp F_H    &kp F_J     &kp F_K      &kp F_L    &kp F_M     &kp F_DOLLAR
+&sk LSHFT  &kp F_W  &kp F_X  &kp F_C  &kp F_V  &kp F_B                            &kp F_N    &kp F_COMMA  &kp F_DOT    &kp F_SLASH  &kp F_EXCL  &rgb_ug RGB_TOG
                          &mo 1  &mo 2  &kp SPACE                        &kp RET  &kp BSPC  &sl 3
     >;
 };
 
-        lower_layer {
-            display-name = "numbers";
-            bindings = <
-&trans  &kp C_MUTE    &kp C_VOL_DN     &kp C_VOL_UP  &none         &kp PSCRN       &trans  &trans  &kp KP_SLASH  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_MULTIPLY  &kp BSPC
-&trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &trans  &trans  &kp KP_PLUS   &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_EQUAL     &kp LS(APOS)
-&trans  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                  &kp KP_MINUS  &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp NUMBER_5     &kp MINUS
-                                       &trans        &none         &trans                          &kp KP_ENTER  &kp KP_N0  &kp KP_DOT
-            >;
-        };
+lower_layer {
+    display-name = "numbers";
+    bindings = <
+&trans  &kp C_MUTE    &kp C_VOL_DN     &kp C_VOL_UP  &none         &kp PSCRN       &trans  &trans  &kp F_PLUS   &kp F_7      &kp F_8       &kp F_9      &kp F_ASTERISK    &kp BSPC
+&trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &trans  &trans  &kp F_MINUS  &kp F_4      &kp F_5       &kp F_6      &kp F_SLASH       &kp F_PERCENT
+&trans  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                  &kp F_0      &kp F_1      &kp F_2       &kp F_3      &kp F_LPAR        &kp F_RPAR
+                                       &trans        &none         &trans                          &kp KP_ENTER    &trans      &kp F_DOT
+    >;
+};
 
         raise_layer {
             display-name = "symbols";
