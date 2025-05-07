@@ -82,7 +82,6 @@
 #define F_EURO         LS(N4)  // € requires AltGr on E key
 #define F_PIPE         LS(N6)  // | requires AltGr on 6 key
 #define F_GRAVE        N7      // ` (grave accent) is a dead key
-#define F_BACKSLASH    LS(N8)  // backslash requires AltGr on 8 key
 #define F_CIRCUMFLEX   LBKT    // ^ (circumflex) is a dead key
 #define F_DIAERESIS    LS(LBKT) // ¨ (diaeresis) requires shift on ^ key
 #define F_DEGREE       LS(RBKT) // ° requires shift on $ key
@@ -117,8 +116,8 @@
         bindings = <
         &kp ESC    &kp F_A  &kp F_Z  &kp F_E  &kp F_R  &kp F_T   &kp LCTRL  &kp RCTRL  &kp F_Y   &kp F_U      &kp F_I    &kp F_O      &kp F_P     &kp DEL
         &kp TAB    &kp F_Q  &kp F_S  &kp F_D  &kp F_F  &kp F_G   &kp LALT   &kp RALT   &kp F_H   &kp F_J      &kp F_K    &kp F_L      &kp F_M     &kp F_DOLLAR
-        &sk LSHFT  &kp F_W  &kp F_X  &kp F_C  &kp F_V  &kp F_B                         &kp F_N   &kp F_COMMA  &kp F_DOT  &kp F_SLASH  &kp F_EXCL  &kp F_STAR
-                                      &mo 1  &mo 2  &kp SPACE                        &kp RET  &kp BSPC  &mo 3
+        &sk LSHFT  &kp F_W  &kp F_X  &kp F_C  &kp F_V  &kp F_B                         &kp F_N   &kp F_COMMA  &kp F_DOT  &kp F_SLASH  &kp F_EXCL  &kp F_ASTERISK
+                                      &mo 1  &mo 2  &kp SPACE                        &kp RET  &kp BSPC  &mo 3  
         >;
     };
 
@@ -135,10 +134,10 @@
     raise_layer {
         display-name = "symbols";
         bindings = <
-        &trans  &kp F_AT &none         &kp F_EURO        &kp F_PLUS   &none  &trans   &trans  &kp F_DQUOTE  &kp F_LBRACKET  &kp F_RBRACKET  &kp F_LESS_THAN  &kp F_GREATER_THAN  &kp BSPC
-        &trans  &none    &kp F_DOLLAR  &kp F_UNDERSCORE  &kp F_MINUS  &none  &trans   &trans  &kp F_SQUOTE  &kp F_LPAR      &kp F_RPAR      &kp F_SLASH      &kp F_BACKSLASH     &kp F_PERCENT
-        &trans  &none    &kp F_STAR    &kp F_HASH        &kp F_EQUAL  &none                   &kp F_GRAVE   &kp F_LBRACE    &kp F_RBRACE    &kp F_AMPERSAND  &kp F_PIPE_SIGN     &kp F_TILDE
-                                        &kp LGUI   &trans   &trans                                &trans   &trans   &none
+        &trans  &kp F_AT &none           &kp F_EURO        &kp F_PLUS   &none  &trans   &trans  &kp F_DQUOTE  &kp F_LBRACKET  &kp F_RBRACKET  &kp F_LESS_THAN  &kp F_GREATER_THAN  &kp BSPC
+        &trans  &none    &kp F_DOLLAR    &kp F_UNDERSCORE  &kp F_MINUS  &none  &trans   &trans  &kp F_SQUOTE  &kp F_LPAR      &kp F_RPAR      &kp F_SLASH      &kp F_BACKSLASH     &kp F_PERCENT
+        &trans  &none    &kp F_ASTERISK  &kp F_HASH        &kp F_EQUAL  &none                   &kp F_GRAVE   &kp F_LBRACE    &kp F_RBRACE    &kp F_AMPERSAND  &kp F_PIPE_SIGN     &kp F_TILDE
+                                                     &kp LGUI   &trans   &trans                                &trans   &trans   &none
         >;
     };
 
