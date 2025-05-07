@@ -32,15 +32,17 @@
 #define F_L     L       // Same position
 #define F_M     SEMI    // M in AZERTY is where ; is in QWERTY
 
-#define F_W     Z       // W in AZERTY is where Z is in QWERTY
-#define F_X     X       // Same position
-#define F_C     C       // Same position
-#define F_V     V       // Same position
-#define F_B     B       // Same position
-#define F_N     N       // Same position
-#define F_COMMA M       // , in AZERTY is where M is in QWERTY
-#define F_DOT   COMMA   // . in AZERTY is where , is in QWERTY
-#define F_SLASH DOT     // / in AZERTY is where . is in QWERTY
+#define F_W     Z         // W in AZERTY is where Z is in QWERTY
+#define F_X     X         // Same position
+#define F_C     C         // Same position
+#define F_V     V         // Same position
+#define F_B     B         // Same position
+#define F_N     N         // Same position
+#define F_COMMA M         // , in AZERTY is where M is in QWERTY
+#define F_SEMI  COMMA     // ; in AZERTY is where , is in QWERTY
+#define F_DOT   LS(COMMA) // . in AZERTY requires shift is where , is in QWERTY
+#define F_COLON DOT       // : in AZERTY is where . is in QWERTY
+#define F_SLASH LS(DOT)   // / in AZERTY is where . is in QWERTY
 
 // Number row (top row)
 #define F_AMPERSAND    N1      // & is on 1 key
@@ -72,16 +74,12 @@
 #define F_CARET        LBKT    // ^ is on [ key in QWERTY
 #define F_DOLLAR       RBKT    // $ is on ] key in QWERTY
 #define F_UGRAVE       BSLH    // ù is on backslash key in QWERTY
-#define F_ASTERISK     RBKT    // * requires shift on $ key
-#define F_PERCENT      GRAVE   // % is on ` key in QWERTY
+    #define F_ASTERISK     RBKT    // * requires shift on $ key
+    #define F_PERCENT      GRAVE   // % is on ` key in QWERTY
 
 // Additional special characters
-#define F_EXCL         LS(N1)  // ! requires shift on 1/& key
-#define F_AT           LS(N2)  // @ (not standard on French AZERTY, but accessible via AltGr)
-#define F_HASH         LS(N3)  // # (not standard on French AZERTY, but accessible via AltGr)
-#define F_EURO         LS(N4)  // € requires AltGr on E key
-#define F_PIPE         LS(N6)  // | requires AltGr on 6 key
-#define F_GRAVE        N7      // ` (grave accent) is a dead key
+    #define F_EXCL         LS(N1)  // ! requires shift on 1/& key
+    #define F_GRAVE        N7      // ` (grave accent) is a dead key
 #define F_CIRCUMFLEX   LBKT    // ^ (circumflex) is a dead key
 #define F_DIAERESIS    LS(LBKT) // ¨ (diaeresis) requires shift on ^ key
 #define F_DEGREE       LS(RBKT) // ° requires shift on $ key
@@ -92,19 +90,18 @@
 #define F_PLUS         LS(EQUAL) // + requires shift on = key
 #define F_LESS_THAN    NON_US_BSLH // < is on the key next to left shift
 #define F_GREATER_THAN LS(NON_US_BSLH) // > requires shift on < key
-#define F_TILDE        LS(N2)  // ~ (not standard on French AZERTY, but accessible via AltGr)
 
 // AltGr combinations (Right Alt + key)
 #define F_TILDE_DEAD   RA(N2)  // ~ as a dead key
-#define F_HASH_SIGN    RA(N3)  // #
-#define F_EURO_SIGN    RA(E)   // €
+#define F_HASH         RA(N3)  // #
+#define F_EURO         RA(E)   // €
 #define F_BACKSLASH    RA(N8)  // backslash
-#define F_AT_SIGN      RA(N0)  // @
+#define F_AT           RA(N0)  // @
 #define F_LBRACE       RA(N4)  // {
 #define F_RBRACE       RA(EQUAL) // }
 #define F_LBRACKET     RA(N5)  // [
 #define F_RBRACKET     RA(MINUS) // ]
-#define F_PIPE_SIGN    RA(N6)  // |
+#define F_PIPE         RA(N6)  // |
 #define F_CURRENCY     RA(RBKT) // ¤
 
 / {
@@ -114,10 +111,10 @@
     default_layer {
         display-name = "keys";
         bindings = <
-        &kp ESC    &kp F_A  &kp F_Z  &kp F_E  &kp F_R  &kp F_T   &kp LCTRL  &kp RCTRL  &kp F_Y   &kp F_U      &kp F_I    &kp F_O      &kp F_P     &kp DEL
-        &kp TAB    &kp F_Q  &kp F_S  &kp F_D  &kp F_F  &kp F_G   &kp LALT   &kp RALT   &kp F_H   &kp F_J      &kp F_K    &kp F_L      &kp F_M     &kp F_DOLLAR
-        &sk LSHFT  &kp F_W  &kp F_X  &kp F_C  &kp F_V  &kp F_B                         &kp F_N   &kp F_COMMA  &kp F_DOT  &kp F_SLASH  &kp F_EXCL  &kp F_ASTERISK
-                                      &mo 1  &mo 2  &kp SPACE                        &kp RET  &kp BSPC  &mo 3  
+        &kp ESC    &kp F_A  &kp F_Z  &kp F_E  &kp F_R  &kp F_T   &kp LCTRL  &kp RCTRL  &kp F_Y   &kp F_U      &kp F_I     &kp F_O      &kp F_P     &kp DEL
+        &kp TAB    &kp F_Q  &kp F_S  &kp F_D  &kp F_F  &kp F_G   &kp LALT   &kp RALT   &kp F_H   &kp F_J      &kp F_K     &kp F_L      &kp F_M     &kp F_DOLLAR
+        &sk LSHFT  &kp F_W  &kp F_X  &kp F_C  &kp F_V  &kp F_B                         &kp F_N   &kp F_COMMA  &kp F_SEMI  &kp F_COLON  &kp F_EXCL  &kp F_ASTERISK
+                                      &mo 1  &mo 2  &kp SPACE                        &kp RET  &kp BSPC  &mo 3
         >;
     };
 
@@ -136,8 +133,8 @@
         bindings = <
         &trans  &kp F_AT &none           &kp F_EURO        &kp F_PLUS   &none  &trans   &trans  &kp F_DQUOTE  &kp F_LBRACKET  &kp F_RBRACKET  &kp F_LESS_THAN  &kp F_GREATER_THAN  &kp BSPC
         &trans  &none    &kp F_DOLLAR    &kp F_UNDERSCORE  &kp F_MINUS  &none  &trans   &trans  &kp F_SQUOTE  &kp F_LPAR      &kp F_RPAR      &kp F_SLASH      &kp F_BACKSLASH     &kp F_PERCENT
-        &trans  &none    &kp F_ASTERISK  &kp F_HASH        &kp F_EQUAL  &none                   &kp F_GRAVE   &kp F_LBRACE    &kp F_RBRACE    &kp F_AMPERSAND  &kp F_PIPE_SIGN     &kp F_TILDE
-                                                     &kp LGUI   &trans   &trans                                &trans   &trans   &none
+        &trans  &none    &kp F_ASTERISK  &kp F_HASH        &kp F_EQUAL  &none                   &kp F_GRAVE   &kp F_LBRACE    &kp F_RBRACE    &kp F_AMPERSAND  &kp F_PIPE          &kp F_TILDE_DEAD
+                                                     &none   &trans   &trans                                &trans   &trans   &none
         >;
     };
 
