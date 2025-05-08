@@ -69,16 +69,15 @@
 #define F_0     LS(N0)      // 0 requires shift on à key
 
 // Special characters on the right side
-#define F_RPAR         MINUS   // ) is on - key in QWERTY
-#define F_EQUAL        EQUAL   // = is on = key but different shift state
-#define F_CARET        LBKT    // ^ is on [ key in QWERTY
-#define F_DOLLAR       RBKT    // $ is on ] key in QWERTY
-#define F_UGRAVE       BSLH    // ù is on backslash key in QWERTY
-    #define F_ASTERISK     RBKT    // * requires shift on $ key
-    #define F_PERCENT      GRAVE   // % is on ` key in QWERTY
+#define F_RPAR         MINUS  // ) is on - key in QWERTY
+#define F_EQUAL        EQUAL  // = is on = key but different shift state
+#define F_DOLLAR       RBKT   // $ is on ] key in QWERTY
+#define F_STAR         BSLH
+#define F_UGRAVE       SQT
+#define F_PERCENT      LS(SQT)
 
 // Additional special characters
-#define F_EXCL         SLASH  // ! requires shift on 1/& key
+#define F_EXCL         SLASH  // 
 #define F_GRAVE        GRAVE   // ` (grave accent)
 #define F_CIRCUMFLEX   LBKT    // ^ (circumflex) is a dead key
 #define F_DIAERESIS    LS(LBKT) // ¨ (diaeresis) requires shift on ^ key
@@ -112,7 +111,7 @@
         bindings = <
         &kp ESC    &kp F_A  &kp F_Z  &kp F_E  &kp F_R  &kp F_T   &kp LCTRL  &kp RCTRL  &kp F_Y   &kp F_U      &kp F_I     &kp F_O      &kp F_P     &kp DEL
         &kp TAB    &kp F_Q  &kp F_S  &kp F_D  &kp F_F  &kp F_G   &kp LALT   &kp RALT   &kp F_H   &kp F_J      &kp F_K     &kp F_L      &kp F_M     &kp F_DOLLAR
-        &sk LSHFT  &kp F_W  &kp F_X  &kp F_C  &kp F_V  &kp F_B                         &kp F_N   &kp F_COMMA  &kp F_SEMI  &kp F_COLON  &kp F_EXCL  &kp F_ASTERISK
+        &sk LSHFT  &kp F_W  &kp F_X  &kp F_C  &kp F_V  &kp F_B                         &kp F_N   &kp F_COMMA  &kp F_SEMI  &kp F_COLON  &kp F_EXCL  &kp F_STAR
                                       &mo 1  &mo 2  &kp SPACE                        &kp RET  &kp BSPC  &mo 3
         >;
     };
@@ -120,7 +119,7 @@
     lower_layer {
         display-name = "numbers";
         bindings = <
-        &trans  &kp C_MUTE    &kp C_VOL_DN     &kp C_VOL_UP  &none         &kp PSCRN       &trans  &trans  &kp F_PLUS   &kp F_7  &kp F_8  &kp F_9  &kp F_ASTERISK  &kp BSPC
+        &trans  &kp C_MUTE    &kp C_VOL_DN     &kp C_VOL_UP  &none         &kp PSCRN       &trans  &trans  &kp F_PLUS   &kp F_7  &kp F_8  &kp F_9  &kp F_STAR      &kp BSPC
         &trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &trans  &trans  &kp F_MINUS  &kp F_4  &kp F_5  &kp F_6  &kp F_SLASH     &kp F_PERCENT
         &trans  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                  &kp F_0      &kp F_1  &kp F_2  &kp F_3  &kp F_LPAR      &kp F_RPAR
                                             &trans        &none         &trans                          &kp KP_ENTER    &trans      &kp F_DOT
@@ -130,9 +129,9 @@
     raise_layer {
         display-name = "symbols";
         bindings = <
-        &trans  &kp F_AT &none           &kp F_EURO        &kp F_PLUS   &none  &trans   &trans  &kp F_DQUOTE  &kp F_LBRACKET  &kp F_RBRACKET  &kp F_LESS_THAN  &kp F_GREATER_THAN  &kp BSPC
-        &trans  &none    &kp F_DOLLAR    &kp F_UNDERSCORE  &kp F_MINUS  &none  &trans   &trans  &kp F_SQUOTE  &kp F_LPAR      &kp F_RPAR      &kp F_SLASH      &kp F_BACKSLASH     &kp F_PERCENT
-        &trans  &none    &kp F_ASTERISK  &kp F_HASH        &kp F_EQUAL  &none                   &kp F_GRAVE   &kp F_LBRACE    &kp F_RBRACE    &kp F_AMPERSAND  &kp F_PIPE          &kp TILDE
+        &trans  &kp F_AT &none         &kp F_EURO        &kp F_PLUS   &none  &trans   &trans  &kp F_DQUOTE  &kp F_LBRACKET  &kp F_RBRACKET  &kp F_LESS_THAN  &kp F_GREATER_THAN  &kp BSPC
+        &trans  &none    &kp F_DOLLAR  &kp F_UNDERSCORE  &kp F_MINUS  &none  &trans   &trans  &kp F_SQUOTE  &kp F_LPAR      &kp F_RPAR      &kp F_SLASH      &kp F_BACKSLASH     &kp F_PERCENT
+        &trans  &none    &kp F_STAR    &kp F_HASH        &kp F_EQUAL  &none                   &kp F_GRAVE   &kp F_LBRACE    &kp F_RBRACE    &kp F_AMPERSAND  &kp F_PIPE          &kp TILDE
                                                      &none   &trans   &trans                                &trans   &trans   &none
         >;
     };
