@@ -78,7 +78,7 @@
     #define F_PERCENT      GRAVE   // % is on ` key in QWERTY
 
 // Additional special characters
-    #define F_EXCL         LS(N1)  // ! requires shift on 1/& key
+#define F_EXCL         SLASH  // ! requires shift on 1/& key
 #define F_GRAVE        GRAVE   // ` (grave accent)
 #define F_CIRCUMFLEX   LBKT    // ^ (circumflex) is a dead key
 #define F_DIAERESIS    LS(LBKT) // ¨ (diaeresis) requires shift on ^ key
