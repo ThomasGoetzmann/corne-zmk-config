@@ -8,99 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
-
-// French AZERTY letter definitions
-#define F_A     Q       // A in AZERTY is where Q is in QWERTY
-#define F_Z     W       // Z in AZERTY is where W is in QWERTY
-#define F_E     E       // Same position
-#define F_R     R       // Same position
-#define F_T     T       // Same position
-#define F_Y     Y       // Same position
-#define F_U     U       // Same position
-#define F_I     I       // Same position
-#define F_O     O       // Same position
-#define F_P     P       // Same position
-
-#define F_Q     A       // Q in AZERTY is where A is in QWERTY
-#define F_S     S       // Same position
-#define F_D     D       // Same position
-#define F_F     F       // Same position
-#define F_G     G       // Same position
-#define F_H     H       // Same position
-#define F_J     J       // Same position
-#define F_K     K       // Same position
-#define F_L     L       // Same position
-#define F_M     SEMI    // M in AZERTY is where ; is in QWERTY
-
-#define F_W     Z         // W in AZERTY is where Z is in QWERTY
-#define F_X     X         // Same position
-#define F_C     C         // Same position
-#define F_V     V         // Same position
-#define F_B     B         // Same position
-#define F_N     N         // Same position
-#define F_COMMA M         // , in AZERTY is where M is in QWERTY
-#define F_SEMI  COMMA     // ; in AZERTY is where , is in QWERTY
-#define F_DOT   LS(COMMA) // . in AZERTY requires shift is where , is in QWERTY
-#define F_COLON DOT       // : in AZERTY is where . is in QWERTY
-#define F_SLASH LS(DOT)   // / in AZERTY is where . is in QWERTY
-
-// Number row (top row)
-#define F_AMPERSAND    N1      // & is on 1 key
-#define F_EACUTE       N2      // é is on 2 key
-#define F_DQUOTE       N3      // " is on 3 key
-#define F_SQUOTE       N4      // ' is on 4 key
-#define F_LPAR         N5      // ( is on 5 key
-#define F_MINUS        N6      // - is on 6 key
-#define F_EGRAVE       N7      // è is on 7 key
-#define F_UNDERSCORE   N8      // _ is on 8 key
-#define F_CCEDILLA     N9      // ç is on 9 key
-#define F_AGRAVE       N0      // à is on 0 key
-
-// Number row with shift
-#define F_1     LS(N1)      // 1 requires shift on & key
-#define F_2     LS(N2)      // 2 requires shift on é key
-#define F_3     LS(N3)      // 3 requires shift on " key
-#define F_4     LS(N4)      // 4 requires shift on ' key
-#define F_5     LS(N5)      // 5 requires shift on ( key
-#define F_6     LS(N6)      // 6 requires shift on - key
-#define F_7     LS(N7)      // 7 requires shift on è key
-#define F_8     LS(N8)      // 8 requires shift on _ key
-#define F_9     LS(N9)      // 9 requires shift on ç key
-#define F_0     LS(N0)      // 0 requires shift on à key
-
-// Special characters on the right side
-#define F_RPAR         MINUS  // ) is on - key in QWERTY
-#define F_EQUAL        EQUAL  // = is on = key but different shift state
-#define F_DOLLAR       RBKT   // $ is on ] key in QWERTY
-#define F_STAR         BSLH
-#define F_UGRAVE       SQT
-#define F_PERCENT      LS(SQT)
-
-// Additional special characters
-#define F_EXCL         SLASH  // 
-#define F_GRAVE        GRAVE   // ` (grave accent)
-#define F_CIRCUMFLEX   LBKT    // ^ (circumflex) is a dead key
-#define F_DIAERESIS    LS(LBKT) // ¨ (diaeresis) requires shift on ^ key
-#define F_DEGREE       LS(RBKT) // ° requires shift on $ key
-#define F_MICRO        LS(COMMA) // µ requires AltGr on * key
-#define F_POUND        LS(N3)  // £ requires AltGr on $ key
-#define F_SECTION      LS(BSLH) // § requires shift on ù key
-#define F_QUESTION     LS(DOT) // ? requires shift on . key
-#define F_PLUS         LS(EQUAL) // + requires shift on = key
-#define F_LESS_THAN    NON_US_BSLH // < is on the key next to left shift
-#define F_GREATER_THAN LS(NON_US_BSLH) // > requires shift on < key
-
-// AltGr combinations (Right Alt + key)
-#define F_HASH         RA(N3)  // #
-#define F_EURO         RA(E)   // €
-#define F_BACKSLASH    RA(N8)  // backslash
-#define F_AT           RA(N0)  // @
-#define F_LBRACE       RA(N4)  // {
-#define F_RBRACE       RA(EQUAL) // }
-#define F_LBRACKET     RA(N5)  // [
-#define F_RBRACKET     RA(MINUS) // ]
-#define F_PIPE         RA(N6)  // |
-#define F_CURRENCY     RA(RBKT) // ¤
+#include <locale/keys_fr.h> // French keymap allows to use key names like FR_A, FR_B, etc. This comes from the zmk-locale project (https://github.com/joelspadin/zmk-locales)
 
 / {
   keymap {
@@ -109,9 +17,9 @@
     default_layer {
         display-name = "keys";
         bindings = <
-        &kp ESC    &kp F_A  &kp F_Z  &kp F_E  &kp F_R  &kp F_T   &kp LCTRL  &kp RCTRL  &kp F_Y   &kp F_U      &kp F_I     &kp F_O      &kp F_P     &kp DEL
-        &kp TAB    &kp F_Q  &kp F_S  &kp F_D  &kp F_F  &kp F_G   &kp LALT   &kp RALT   &kp F_H   &kp F_J      &kp F_K     &kp F_L      &kp F_M     &kp F_DOLLAR
-        &sk LSHFT  &kp F_W  &kp F_X  &kp F_C  &kp F_V  &kp F_B                         &kp F_N   &kp F_COMMA  &kp F_SEMI  &kp F_COLON  &kp F_EXCL  &kp F_STAR
+        &kp ESC    &kp FR_A  &kp FR_Z  &kp FR_E  &kp FR_R  &kp FR_T   &kp LCTRL  &kp RCTRL  &kp FR_Y   &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
+        &kp TAB    &kp FR_Q  &kp FR_S  &kp FR_D  &kp FR_F  &kp FR_G   &kp LALT   &kp RALT   &kp FR_H   &kp FR_J      &kp FR_K     &kp FR_L      &kp FR_M     &kp FR_DOLLAR
+        &sk LSHFT  &kp FR_W  &kp FR_X  &kp FR_C  &kp FR_V  &kp FR_B                         &kp FR_N   &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
                                       &mo 1  &mo 2  &kp SPACE                        &kp RET  &kp BSPC  &mo 3
         >;
     };
@@ -119,19 +27,19 @@
     lower_layer {
         display-name = "numbers";
         bindings = <
-        &trans  &kp C_MUTE    &kp C_VOL_DN     &kp C_VOL_UP  &none         &kp PSCRN       &trans  &trans  &kp F_PLUS   &kp F_7  &kp F_8  &kp F_9  &kp F_STAR      &kp BSPC
-        &trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &trans  &trans  &kp F_MINUS  &kp F_4  &kp F_5  &kp F_6  &kp F_SLASH     &kp F_PERCENT
-        &trans  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                  &kp F_0      &kp F_1  &kp F_2  &kp F_3  &kp F_LPAR      &kp F_RPAR
-                                            &trans        &none         &trans                          &kp KP_ENTER    &trans      &kp F_DOT
+        &trans  &kp C_MUTE    &kp C_VOL_DN     &kp C_VOL_UP  &none         &kp PSCRN       &trans  &trans  &kp FR_PLUS   &kp FR_N7  &kp FR_N8  &kp FR_N9  &kp FR_STAR      &kp BSPC
+        &trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &trans  &trans  &kp FR_MINUS  &kp FR_N4  &kp FR_N5  &kp FR_N6  &kp FR_SLASH     &kp FR_PERCENT
+        &trans  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                  &kp FR_N0     &kp FR_N1  &kp FR_N2  &kp FR_N3  &kp FR_LPAR      &kp FR_RPAR
+                                            &trans        &none         &trans                          &kp KP_ENTER    &trans      &kp FR_DOT
         >;
     };
 
     raise_layer {
         display-name = "symbols";
         bindings = <
-        &trans  &kp F_AT &none         &kp F_EURO        &kp F_PLUS   &none  &trans   &trans  &kp F_DQUOTE  &kp F_LBRACKET  &kp F_RBRACKET  &kp F_LESS_THAN  &kp F_GREATER_THAN  &kp BSPC
-        &trans  &none    &kp F_DOLLAR  &kp F_UNDERSCORE  &kp F_MINUS  &none  &trans   &trans  &kp F_SQUOTE  &kp F_LPAR      &kp F_RPAR      &kp F_SLASH      &kp F_BACKSLASH     &kp F_PERCENT
-        &trans  &none    &kp F_STAR    &kp F_HASH        &kp F_EQUAL  &none                   &kp F_GRAVE   &kp F_LBRACE    &kp F_RBRACE    &kp F_AMPERSAND  &kp F_PIPE          &kp TILDE
+        &trans  &kp FR_AT &none         &kp FR_EURO        &kp FR_PLUS   &none  &trans   &trans  &kp FR_DQT    &kp FR_LBKT  &kp FR_RBKT  &kp FR_LT    &kp FR_GT    &kp BSPC
+        &trans  &none    &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &none  &trans   &trans  &kp FR_SQT    &kp FR_LPAR  &kp FR_RPAR  &kp FR_FSLH  &kp FR_BSLH  &kp FR_PERCENT
+        &trans  &none    &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                   &kp FR_GRAVE  &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp TILDE
                                                      &none   &trans   &trans                                &trans   &trans   &none
         >;
     };
