@@ -27,50 +27,50 @@
         default_layer {
             display-name = "keys";
             bindings = <
-&none      &kp FR_A       &kp FR_Z       &kp FR_E        &kp FR_R        &kp FR_T   &kp LCTRL  &kp RCTRL  &kp FR_Y  &kp FR_U        &kp FR_I        &kp FR_O       &kp FR_P       &kp DEL
-&kp TAB    &mt LGUI FR_Q  &mt LALT FR_S  &mt LSHFT FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LALT   &kp RALT   &kp FR_H  &mt RCTRL FR_J  &mt RSHFT FR_K  &mt RALT FR_L  &mt RGUI FR_M  &kp FR_DOLLAR
-&sk LSHFT  &kp FR_W       &kp FR_X       &kp FR_C        &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA    &kp FR_SEMI     &kp FR_COLON   &kp FR_EXCL    &kp FR_STAR
-                                         &mo 1           &mo 2           &kp SPACE                        &kp RET   &kp BSPC        &tog 3
+&mo 4      &kp FR_A       &kp FR_Z         &kp FR_E       &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
+&kp TAB    &mt LGUI FR_Q  &mt LSHIFT FR_S  &mt LALT FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LGUI  &kp RCTRL   &kp FR_H  &kp FR_J      &kp FR_K     &kp FR_L      &kp FR_M     &kp FR_DOLLAR
+&sk LSHFT  &kp FR_W       &kp FR_X         &kp FR_C       &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
+                                           &mo 1          &mo 2           &kp SPACE                        &kp RET   &kp BSPC      &tog 3
             >;
         };
 
         lower_layer {
             display-name = "numbers";
             bindings = <
-&trans  &kp C_MUTE    &kp C_VOL_DN     &kp C_VOL_UP  &none         &kp PSCRN       &trans  &trans  &kp FR_PLUS   &kp FR_N7  &kp FR_N8   &kp FR_N9  &kp FR_STAR   &kp BSPC
-&trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &trans  &trans  &kp FR_MINUS  &kp FR_N4  &kp FR_N5   &kp FR_N6  &kp FR_SLASH  &kp FR_PERCENT
-&trans  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                  &kp FR_N0     &kp FR_N1  &kp FR_N2   &kp FR_N3  &kp FR_LPAR   &kp FR_RPAR
-                                       &trans        &none         &trans                          &kp KP_ENTER  &trans     &kp FR_DOT
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6   &trans  &trans  &kp FR_PLUS   &kp FR_N7  &kp FR_N8   &kp FR_N9  &kp FR_STAR   &kp BSPC
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp FR_MINUS  &kp FR_N4  &kp FR_N5   &kp FR_N6  &kp FR_SLASH  &kp FR_PERCENT
+&none   &none   &none   &none    &none    &none                    &kp FR_N0     &kp FR_N1  &kp FR_N2   &kp FR_N3  &kp FR_LPAR   &kp FR_RPAR
+                        &none    &none    &trans                   &kp KP_ENTER  &trans     &kp FR_DOT
             >;
         };
 
         raise_layer {
             display-name = "symbols";
             bindings = <
-&trans  &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &none   &trans  &trans  &kp FR_DQT  &kp FR_LBKT  &kp FR_RBKT  &kp FR_LT    &kp FR_GT    &kp BSPC
+&none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &none   &trans  &trans  &kp FR_DQT  &kp FR_LBKT  &kp FR_RBKT  &kp FR_LT    &kp FR_GT    &kp BSPC
 &trans  &none      &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &none   &trans  &trans  &kp FR_SQT  &kp FR_LPAR  &kp FR_RPAR  &kp FR_FSLH  &kp FR_BSLH  &kp FR_PERCENT
 &trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                   &kp GRAVE   &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp TILDE
-                                  &none              &trans        &trans                  &trans      &trans       &none
+                                  &none              &none         &trans                  &trans      &trans       &none
             >;
         };
 
         extra_layer_1 {
-            display-name = "extra1";
+            display-name = "arrows";
             bindings = <
-&kp ESC  &kp F1  &kp F2  &kp F3  &kp F4        &kp F5   &kp F6   &none  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
-&kp TAB  &kp F7  &kp F8  &kp F9  &kp F10       &kp F11  &kp F12  &none  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
-&none    &none   &none   &none   &none         &none                    &none        &none     &none     &none      &none  &none
-                         &none   &kp LEFT_ALT  &none                    &trans       &trans    &tog 3
+&kp F1  &kp F2  &kp F3  &kp F4    &kp F5        &kp F6   &kp ESC    &none  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
+&kp F7  &kp F8  &kp F9  &kp F10   &kp F11       &kp F12  &kp SPACE  &none  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
+&none   &none   &none   &none     &none         &none                      &none        &none     &none     &none      &none  &none
+                        &kp LALT  &kp LEFT_ALT  &trans                     &trans       &trans    &tog 3
             >;
         };
 
         extra_layer_2 {
-            display-name = "extra2";
+            display-name = "system";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
+&none  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &none  &none  &none  &none  &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &none  &none  &none  &none  &none  &none
+&none  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &none  &none  &none  &none  &none  &none
+                                      &none         &none         &none                         &none  &none  &none
             >;
         };
     };
