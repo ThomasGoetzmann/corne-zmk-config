@@ -11,22 +11,26 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    chosen {
-        zmk,physical-layout = &default_layout;
-    };
-};
+    combos {
+        compatible = "zmk,combos";
 
-/ {
+        esc-gh {
+            bindings = <&kp ESC>;
+            key-positions = <19 22>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "keys";
             bindings = <
-&kp ESC    &kp FR_A  &kp FR_Z  &kp FR_E  &kp FR_R  &kp FR_T   &kp LCTRL  &kp RCTRL  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
-&kp TAB    &kp FR_Q  &kp FR_S  &kp FR_D  &kp FR_F  &kp FR_G   &kp LALT   &kp RALT   &kp FR_H  &kp FR_J      &kp FR_K     &kp FR_L      &kp FR_M     &kp FR_DOLLAR
-&sk LSHFT  &kp FR_W  &kp FR_X  &kp FR_C  &kp FR_V  &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
-                               &mo 1     &mo 2     &kp SPACE                        &kp RET   &kp BSPC      &mo 3
+&none      &kp FR_A       &kp FR_Z       &kp FR_E        &kp FR_R        &kp FR_T   &kp LCTRL  &kp RCTRL  &kp FR_Y  &kp FR_U        &kp FR_I        &kp FR_O       &kp FR_P       &kp DEL
+&kp TAB    &mt LGUI FR_Q  &mt LALT FR_S  &mt LSHFT FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LALT   &kp RALT   &kp FR_H  &mt RCTRL FR_J  &mt RSHFT FR_K  &mt RALT FR_L  &mt RGUI FR_M  &kp FR_DOLLAR
+&sk LSHFT  &kp FR_W       &kp FR_X       &kp FR_C        &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA    &kp FR_SEMI     &kp FR_COLON   &kp FR_EXCL    &kp FR_STAR
+                                         &mo 1           &mo 2           &kp SPACE                        &kp RET   &kp BSPC        &tog 3
             >;
         };
 
@@ -53,10 +57,10 @@
         extra_layer_1 {
             display-name = "extra1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp UP    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans    &trans    &trans     &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans    &trans
+&kp ESC  &kp F1  &kp F2  &kp F3  &kp F4        &kp F5   &kp F6   &none  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
+&kp TAB  &kp F7  &kp F8  &kp F9  &kp F10       &kp F11  &kp F12  &none  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
+&none    &none   &none   &none   &none         &none                    &none        &none     &none     &none      &none  &none
+                         &none   &kp LEFT_ALT  &none                    &trans       &trans    &tog 3
             >;
         };
 
