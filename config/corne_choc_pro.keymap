@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <behaviors/rgbled_widget.dtsi>
 
 &mt { flavor = "tap-preferred"; };
 
@@ -69,10 +70,10 @@
         system {
             display-name = "system";
             bindings = <
-&none  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &none  &none  &none  &none  &none  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &none  &none  &none  &none  &none  &none
-&none  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &none  &none  &none  &none  &none  &none
-                                      &none         &none         &none                         &none  &none  &none
+&none  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &none  &none       &none  &none  &none  &ind_bat
+&none  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &none  &none       &none  &none  &none  &ind_con
+&none  &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &none  &none       &none  &none  &none  &none
+                                      &none         &none         &none                         &none  &bt BT_CLR  &none
             >;
         };
 

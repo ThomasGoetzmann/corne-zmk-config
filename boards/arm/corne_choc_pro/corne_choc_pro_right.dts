@@ -11,6 +11,8 @@
 	model = "corne_choc_pro_right";
 	compatible = "corne_choc_pro_right";
 
+
+
 	chosen {
 		zmk,battery = &fuelgauge;
         zmk,underglow = &led_strip;
