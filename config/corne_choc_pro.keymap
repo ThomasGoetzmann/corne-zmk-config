@@ -29,9 +29,9 @@
         default_layer {
             display-name = "keys";
             bindings = <
-&mo 4      &kp FR_A       &kp FR_Z         &lt 5 FR_E     &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
+&mo 4      &lt 6 FR_A     &kp FR_Z         &lt 5 FR_E     &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
 &kp TAB    &mt LGUI FR_Q  &mt LSHIFT FR_S  &mt LALT FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LGUI  &kp RCTRL   &kp FR_H  &kp FR_J      &kp FR_K     &kp FR_L      &kp FR_M     &kp FR_DOLLAR
-&sk LSHFT  &kp FR_W       &kp FR_X         &kp FR_C       &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
+&sk LSHFT  &kp FR_W       &kp FR_X         &lt 7 FR_C     &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
                                            &mo 1          &mo 2           &kp SPACE                        &kp RET   &kp BSPC      &tog 3
             >;
         };
@@ -49,10 +49,10 @@
         raise_layer {
             display-name = "symbols";
             bindings = <
-&none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &none   &trans  &trans  &kp FR_DQT  &kp FR_LBKT  &kp FR_RBKT  &kp FR_LT    &kp FR_GT    &kp BSPC
-&trans  &none      &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &none   &trans  &trans  &kp FR_SQT  &kp FR_LPAR  &kp FR_RPAR  &kp FR_FSLH  &kp FR_BSLH  &kp FR_PERCENT
-&trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                   &kp GRAVE   &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp TILDE
-                                  &none              &none         &trans                  &trans      &trans       &none
+&none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &kp FR_UMLAUT  &trans  &trans  &kp FR_DQT  &kp FR_LBKT  &kp FR_RBKT  &kp FR_LT    &kp FR_GT    &kp BSPC
+&trans  &none      &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &kp FR_CARET   &trans  &trans  &kp FR_SQT  &kp FR_LPAR  &kp FR_RPAR  &kp FR_FSLH  &kp FR_BSLH  &kp FR_PERCENT
+&trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &kp GRAVE   &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp TILDE
+                                  &none              &none         &trans                         &trans      &trans       &none
             >;
         };
 
@@ -82,6 +82,24 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_E_GRAVE  &kp FR_CARET   &kp FR_E_ACUTE  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans         &trans          &trans  &trans
                         &trans  &trans  &trans                  &trans  &trans          &trans
+            >;
+        };
+
+        a_accents {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp FR_UMLAUT  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_A_GRAVE  &kp FR_CARET   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans         &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans          &trans
+            >;
+        };
+
+        c_cedillle {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_C_CEDILLA  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans            &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
     };
