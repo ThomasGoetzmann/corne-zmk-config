@@ -36,7 +36,7 @@
             >;
         };
 
-        lower_layer {
+        numbers {
             display-name = "numbers";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5        &kp F6   &trans  &trans  &kp FR_PLUS   &kp FR_N7       &kp FR_N8   &kp FR_N9  &kp FR_STAR   &kp BSPC
@@ -46,7 +46,7 @@
             >;
         };
 
-        raise_layer {
+        symbols {
             display-name = "symbols";
             bindings = <
 &none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &kp FR_UMLAUT  &trans  &trans  &kp FR_DQT  &kp FR_LBKT  &kp FR_RBKT  &kp FR_LT    &kp FR_GT    &kp BSPC
@@ -56,7 +56,7 @@
             >;
         };
 
-        extra_layer_1 {
+        arrows {
             display-name = "arrows";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4    &kp F5        &kp F6   &kp ESC    &none  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
@@ -66,7 +66,7 @@
             >;
         };
 
-        extra_layer_2 {
+        system {
             display-name = "system";
             bindings = <
 &none  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &none  &none  &none  &none  &none  &none
