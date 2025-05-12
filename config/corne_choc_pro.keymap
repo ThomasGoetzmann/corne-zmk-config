@@ -33,7 +33,7 @@
 &mo 4      &lt 6 FR_A     &kp FR_Z         &lt 5 FR_E     &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
 &kp TAB    &mt LGUI FR_Q  &mt LSHIFT FR_S  &mt LALT FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LGUI  &kp RCTRL   &kp FR_H  &kp FR_J      &kp FR_K     &kp FR_L      &kp FR_M     &kp FR_DOLLAR
 &sk LSHFT  &kp FR_W       &kp FR_X         &lt 7 FR_C     &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
-                                           &mo 1          &mo 2           &kp SPACE                        &kp RET   &kp BSPC      &tog 3
+                                           &mo 1          &mo 2           &kp SPACE                        &kp RET   &kp BSPC      &mo 3
             >;
         };
 
@@ -42,8 +42,8 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5        &kp F6   &trans  &trans  &kp FR_PLUS   &kp FR_N7       &kp FR_N8   &kp FR_N9  &kp FR_STAR   &kp BSPC
 &kp F7  &kp F8  &kp F9  &kp F10  &mt LGUI F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mt LALT FR_N4  &kp FR_N5   &kp FR_N6  &kp FR_SLASH  &kp FR_PERCENT
-&none   &none   &none   &none    &none         &none                    &kp FR_N0     &kp FR_N1       &kp FR_N2   &kp FR_N3  &kp FR_LPAR   &kp FR_RPAR
-                        &none    &none         &trans                   &kp KP_ENTER  &trans          &kp FR_DOT
+&none   &none   &none   &none    &none         &none                    &kp FR_EQUAL  &kp FR_N1       &kp FR_N2   &kp FR_N3  &kp FR_LPAR   &kp FR_RPAR
+                        &none    &none         &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
             >;
         };
 
@@ -63,7 +63,7 @@
 &kp F1  &kp F2  &kp F3  &kp F4    &kp F5        &kp F6   &trans  &trans  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
 &kp F7  &kp F8  &kp F9  &kp F10   &kp F11       &kp F12  &trans  &trans  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
 &none   &none   &none   &none     &none         &none                    &none        &none     &none     &none      &none  &none
-                        &kp LALT  &kp LEFT_ALT  &trans                   &trans       &trans    &tog 3
+                        &kp LALT  &kp LEFT_ALT  &trans                   &trans       &trans    &none
             >;
         };
 
