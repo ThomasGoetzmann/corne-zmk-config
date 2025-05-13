@@ -70,10 +70,10 @@
         system {
             display-name = "system";
             bindings = <
-&none  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &none  &none       &none  &none  &none  &ind_bat
-&none  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &none  &none       &none  &none  &none  &ind_con
-&none  &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &none  &none       &none  &none  &none  &none
-                                      &none         &none         &none                         &none  &bt BT_CLR  &none
+&none  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &rgb_ug RGB_COLOR_HSB(208,100,38)  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &ind_bat
+&none  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &rgb_ug RGB_COLOR_HSB(128,95,24)   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &ind_con
+&none  &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none            &none            &none
+                                      &none         &none         &none                         &none                              &bt BT_CLR       &none
             >;
         };
 
