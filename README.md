@@ -6,3 +6,7 @@
 - no screen
 - no rotary encoder
 - board: nRF52840 M.2 Module (nrf52840_m2)
+
+## My layout 
+
+![My french keymap 42 keys](./my_keymap.svg)
