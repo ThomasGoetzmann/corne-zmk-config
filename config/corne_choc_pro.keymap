@@ -52,7 +52,7 @@
             bindings = <
 &none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &kp FR_UMLAUT  &trans  &trans  &kp FR_DQT  &kp FR_LBKT  &kp FR_RBKT  &kp FR_FSLH  &kp FR_BSLH  &kp BSPC
 &trans  &none      &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &kp FR_CARET   &trans  &trans  &kp FR_SQT  &kp FR_LPAR  &kp FR_RPAR  &kp FR_LT    &kp FR_GT    &kp FR_PERCENT
-&trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &kp GRAVE   &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp TILDE
+&trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &kp GRAVE   &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp FR_TILDE
                                   &none              &none         &trans                         &trans      &trans       &none
             >;
         };
