@@ -39,9 +39,11 @@ config ZMK_MAX17048
     default y
 
 config CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+	bool "Enable fetching split peripheral battery levels to the central side"
 	default y
 
 config CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+	bool "Enable central reporting of split battery levels to hosts"
 	default y
 
 endif # BOARD_CORNE_CHOC_PRO_LEFT || BOARD_CORNE_CHOC_PRO_RIGHT
