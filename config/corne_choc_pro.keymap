@@ -25,30 +25,30 @@
     };
 
     behaviors {
-        tapdance1: tapdance1 {
+        td_numbers: tapdance1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE1";
+            label = "numbers";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&tog 1>;
         };
 
-        tapdance2: tapdance2 {
+        td_symbols: tapdance2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE2";
+            label = "symbols";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 2>;
         };
 
-        tapdance3: tapdance3 {
+        tp_arrows: tapdance3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE3";
+            label = "arrows";
             #binding-cells = <0>;
             bindings = <&mo 3>, <&tog 3>;
         };
 
-        tapdance4: tapdance4 {
+        tp_system: tapdance4 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE4";
+            label = "system";
             #binding-cells = <0>;
             bindings = <&mo 4>, <&tog 4>;
         };
@@ -60,10 +60,10 @@
         default_layer {
             display-name = "keys";
             bindings = <
-&tapdance4  &lt 6 FR_A     &kp FR_Z         &lt 5 FR_E     &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
+&tp_system  &lt 6 FR_A     &kp FR_Z         &lt 5 FR_E     &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
 &kp TAB     &mt LGUI FR_Q  &mt LSHIFT FR_S  &mt LALT FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LGUI  &kp RCTRL   &kp FR_H  &kp FR_J      &kp FR_K     &kp FR_L      &kp FR_M     &kp FR_DOLLAR
 &sk LSHFT   &kp FR_W       &kp FR_X         &lt 7 FR_C     &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
-                                            &tapdance1     &tapdance2      &kp SPACE                        &kp RET   &kp BSPC      &tapdance3
+                                            &td_numbers    &td_symbols     &kp SPACE                        &kp RET   &kp BSPC      &tp_arrows
             >;
         };
 
