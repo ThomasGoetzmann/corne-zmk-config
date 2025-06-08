@@ -24,16 +24,46 @@
         };
     };
 
+    behaviors {
+        tapdance1: tapdance1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE1";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&tog 1>;
+        };
+
+        tapdance2: tapdance2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE2";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tog 2>;
+        };
+
+        tapdance3: tapdance3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE3";
+            #binding-cells = <0>;
+            bindings = <&mo 3>, <&tog 3>;
+        };
+
+        tapdance4: tapdance4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE4";
+            #binding-cells = <0>;
+            bindings = <&mo 4>, <&tog 4>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "keys";
             bindings = <
-&mo 4      &lt 6 FR_A     &kp FR_Z         &lt 5 FR_E     &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
-&kp TAB    &mt LGUI FR_Q  &mt LSHIFT FR_S  &mt LALT FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LGUI  &kp RCTRL   &kp FR_H  &kp FR_J      &kp FR_K     &kp FR_L      &kp FR_M     &kp FR_DOLLAR
-&sk LSHFT  &kp FR_W       &kp FR_X         &lt 7 FR_C     &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
-                                           &mo 1          &mo 2           &kp SPACE                        &kp RET   &kp BSPC      &mo 3
+&tapdance4  &lt 6 FR_A     &kp FR_Z         &lt 5 FR_E     &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
+&kp TAB     &mt LGUI FR_Q  &mt LSHIFT FR_S  &mt LALT FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LGUI  &kp RCTRL   &kp FR_H  &kp FR_J      &kp FR_K     &kp FR_L      &kp FR_M     &kp FR_DOLLAR
+&sk LSHFT   &kp FR_W       &kp FR_X         &lt 7 FR_C     &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
+                                            &tapdance1     &tapdance2      &kp SPACE                        &kp RET   &kp BSPC      &tapdance3
             >;
         };
 
@@ -43,7 +73,7 @@
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5        &kp F6   &trans  &trans  &kp FR_PLUS   &kp FR_N7       &kp FR_N8   &kp FR_N9  &kp FR_STAR   &kp BSPC
 &kp F7  &kp F8  &kp F9  &kp F10  &mt LGUI F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mt LALT FR_N4  &kp FR_N5   &kp FR_N6  &kp FR_SLASH  &kp FR_PERCENT
 &none   &none   &none   &none    &none         &none                    &kp FR_EQUAL  &kp FR_N1       &kp FR_N2   &kp FR_N3  &kp FR_LPAR   &kp FR_RPAR
-                        &none    &none         &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
+                        &trans   &none         &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
             >;
         };
 
@@ -53,7 +83,7 @@
 &none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &kp FR_UMLAUT  &trans  &trans  &kp FR_DQT  &kp FR_LBKT  &kp FR_RBKT  &kp FR_FSLH  &kp FR_BSLH  &kp BSPC
 &trans  &none      &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &kp FR_CARET   &trans  &trans  &kp FR_SQT  &kp FR_LPAR  &kp FR_RPAR  &kp FR_LT    &kp FR_GT    &kp FR_PERCENT
 &trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &kp GRAVE   &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp FR_TILDE
-                                  &none              &none         &trans                         &trans      &trans       &none
+                                  &none              &trans        &trans                         &trans      &trans       &none
             >;
         };
 
@@ -63,17 +93,17 @@
 &kp F1  &kp F2  &kp F3  &kp F4    &kp F5        &kp F6   &trans  &trans  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
 &kp F7  &kp F8  &kp F9  &kp F10   &kp F11       &kp F12  &trans  &trans  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
 &none   &none   &none   &none     &none         &none                    &none        &none     &none     &none      &none  &none
-                        &kp LALT  &kp LEFT_ALT  &trans                   &trans       &trans    &none
+                        &kp LALT  &kp LEFT_ALT  &trans                   &trans       &trans    &trans
             >;
         };
 
         system {
             display-name = "system";
             bindings = <
-&none  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &rgb_ug RGB_COLOR_HSB(208,100,38)  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &ind_bat
-&none  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &rgb_ug RGB_COLOR_HSB(128,95,24)   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &ind_con
-&none  &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none            &none            &none
-                                      &none         &none         &none                         &none                              &bt BT_CLR       &none
+&trans  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &rgb_ug RGB_COLOR_HSB(208,100,38)  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &ind_bat
+&none   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &rgb_ug RGB_COLOR_HSB(128,95,24)   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &ind_con
+&none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none            &none            &none
+                                       &none         &none         &none                         &none                              &bt BT_CLR       &none
             >;
         };
 
