@@ -17,10 +17,60 @@
     combos {
         compatible = "zmk,combos";
 
-        esc-gh {
+        combo_esc-with-gh {
             bindings = <&kp ESC>;
             key-positions = <19 22>;
             layers = <0>;
+        };
+
+        combo_e_grave {
+            bindings = <&kp FR_E_GRAVE>;
+            key-positions = <3 23>;
+        };
+
+        combo_e_aigu {
+            bindings = <&kp FR_E_ACUTE>;
+            key-positions = <3 25>;
+        };
+
+        combo_e_circonflex {
+            bindings = <&macro_e_circonflex>;
+            key-positions = <3 24>;
+        };
+
+        combo_e_umlaut {
+            bindings = <&macro_e_umlaut>;
+            key-positions = <3 10>;
+        };
+
+        combo_a_grave {
+            bindings = <&kp FR_A_GRAVE>;
+            key-positions = <1 23>;
+        };
+
+        combo_a_circonflex {
+            bindings = <&macro_a_circonflex>;
+            key-positions = <1 24>;
+        };
+
+        combo_a_umlaut {
+            bindings = <&macro_a_umlaut>;
+            key-positions = <1 10>;
+        };
+
+        combo_c_cedille {
+            bindings = <&kp FR_C_CEDILLA>;
+            key-positions = <31 24>;
+        };
+
+        combo_u_grave {
+            bindings = <&kp FR_U_GRAVE>;
+            key-positions = <9 18>;
+        };
+
+        combo_u_umlaut {
+            bindings = <&macro_u_umlaut>;
+            key-positions = <9 10>;
         };
     };
 
@@ -39,18 +89,90 @@
             bindings = <&mo 2>, <&tog 2>;
         };
 
-        tp_arrows: tapdance3 {
+        td_arrows: tapdance3 {
             compatible = "zmk,behavior-tap-dance";
             label = "arrows";
             #binding-cells = <0>;
             bindings = <&mo 3>, <&tog 3>;
         };
 
-        tp_system: tapdance4 {
+        td_system: tapdance4 {
             compatible = "zmk,behavior-tap-dance";
             label = "system";
             #binding-cells = <0>;
             bindings = <&mo 4>, <&tog 4>;
+        };
+    };
+
+    macros {
+        macro_e_circonflex: fr_e_circonflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_CARET &kp FR_E>;
+            label = "fr_e_circonflex";
+        };
+
+        macro_e_umlaut: fr_e_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_UMLAUT &kp FR_E>;
+            label = "FR_E_UMLAUT";
+        };
+
+        macro_a_circonflex: fr_a_circonflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_CARET &kp FR_A>;
+            label = "FR_A_CIRCONFLEX";
+        };
+
+        macro_a_umlaut: fr_a_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_UMLAUT &kp FR_A>;
+            label = "FR_A_UMLAUT";
+        };
+
+        macro_i_circonflex: macro_i_circonflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_CARET &kp FR_I>;
+            label = "MACRO_I_CIRCONFLEX";
+        };
+
+        macro_i_umlaut: macro_i_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_UMLAUT &kp FR_I>;
+            label = "MACRO_I_UMLAUT";
+        };
+
+        macro_o_circonflex: macro_o_circonflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_CARET &kp FR_O>;
+            label = "MACRO_O_CIRCONFLEX";
+        };
+
+        macro_o_umlaut: macro_o_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_UMLAUT &kp FR_O>;
+            label = "MACRO_O_UMLAUT";
+        };
+
+        macro_u_circonflex: macro_u_circonflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_CARET &kp FR_U>;
+            label = "MACRO_U_CIRCONFLEX";
+        };
+
+        macro_u_umlaut: macro_u_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_UMLAUT &kp FR_U>;
+            label = "MACRO_U_UMLAUT";
         };
     };
 
@@ -60,20 +182,20 @@
         default_layer {
             display-name = "keys";
             bindings = <
-&tp_system  &lt 6 FR_A     &kp FR_Z         &lt 5 FR_E     &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
+&td_system  &kp FR_A       &kp FR_Z         &kp FR_E       &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U      &kp FR_I     &kp FR_O      &kp FR_P     &kp DEL
 &kp TAB     &mt LGUI FR_Q  &mt LSHIFT FR_S  &mt LALT FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LGUI  &kp RCTRL   &kp FR_H  &kp FR_J      &kp FR_K     &kp FR_L      &kp FR_M     &kp FR_DOLLAR
-&sk LSHFT   &kp FR_W       &kp FR_X         &lt 7 FR_C     &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
-                                            &td_numbers    &td_symbols     &kp SPACE                        &kp RET   &kp BSPC      &tp_arrows
+&sk LSHFT   &kp FR_W       &kp FR_X         &kp FR_C       &kp FR_V        &kp FR_B                         &kp FR_N  &kp FR_COMMA  &kp FR_SEMI  &kp FR_COLON  &kp FR_EXCL  &kp FR_STAR
+                                            &td_numbers    &td_symbols     &kp SPACE                        &kp RET   &kp BSPC      &td_arrows
             >;
         };
 
         numbers {
             display-name = "numbers";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5        &kp F6   &trans  &trans  &kp FR_PLUS   &kp FR_N7       &kp FR_N8   &kp FR_N9  &kp FR_STAR   &kp BSPC
-&kp F7  &kp F8  &kp F9  &kp F10  &mt LGUI F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mt LALT FR_N4  &kp FR_N5   &kp FR_N6  &kp FR_SLASH  &kp FR_PERCENT
-&none   &none   &none   &none    &none         &none                    &kp FR_EQUAL  &kp FR_N1       &kp FR_N2   &kp FR_N3  &kp FR_LPAR   &kp FR_RPAR
-                        &trans   &none         &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6   &trans  &trans  &kp FR_PLUS   &kp FR_N7       &kp FR_N8   &kp FR_N9  &kp FR_STAR   &kp BSPC
+&kp F7  &kp F8  &kp F9  &kp F10  &mt LS(LGUI) F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mt LALT FR_N4  &kp FR_N5   &kp FR_N6  &kp FR_SLASH  &kp FR_PERCENT
+&none   &none   &none   &none    &none             &none                    &kp FR_EQUAL  &kp FR_N1       &kp FR_N2   &kp FR_N3  &kp FR_LPAR   &kp FR_RPAR
+                        &trans   &none             &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
             >;
         };
 
@@ -104,33 +226,6 @@
 &none   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &rgb_ug RGB_COLOR_HSB(128,95,24)   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &ind_con
 &none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none            &none            &none
                                        &none         &none         &none                         &none                              &bt BT_CLR       &none
-            >;
-        };
-
-        e-accents {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp FR_UMLAUT  &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_E_GRAVE  &kp FR_CARET   &kp FR_E_ACUTE  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans         &trans          &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans          &trans
-            >;
-        };
-
-        a_accents {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp FR_UMLAUT  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_A_GRAVE  &kp FR_CARET   &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans         &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans          &trans
-            >;
-        };
-
-        c_cedillle {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_C_CEDILLA  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans            &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
     };
