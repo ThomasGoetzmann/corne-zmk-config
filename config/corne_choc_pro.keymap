@@ -21,56 +21,67 @@
             bindings = <&kp ESC>;
             key-positions = <19 22>;
             layers = <0>;
+            timeout-ms = <80>;
         };
 
         combo_e_grave {
             bindings = <&kp FR_E_GRAVE>;
             key-positions = <3 23>;
+            timeout-ms = <80>;
         };
 
         combo_e_aigu {
             bindings = <&kp FR_E_ACUTE>;
             key-positions = <3 25>;
+            timeout-ms = <80>;
         };
 
         combo_e_circonflex {
             bindings = <&macro_e_circonflex>;
             key-positions = <3 24>;
+            timeout-ms = <80>;
         };
 
         combo_e_umlaut {
             bindings = <&macro_e_umlaut>;
             key-positions = <3 10>;
+            timeout-ms = <80>;
         };
 
         combo_a_grave {
             bindings = <&kp FR_A_GRAVE>;
             key-positions = <1 23>;
+            timeout-ms = <80>;
         };
 
         combo_a_circonflex {
             bindings = <&macro_a_circonflex>;
             key-positions = <1 24>;
+            timeout-ms = <80>;
         };
 
         combo_a_umlaut {
             bindings = <&macro_a_umlaut>;
             key-positions = <1 10>;
+            timeout-ms = <80>;
         };
 
         combo_c_cedille {
             bindings = <&kp FR_C_CEDILLA>;
             key-positions = <31 24>;
+            timeout-ms = <80>;
         };
 
         combo_u_grave {
             bindings = <&kp FR_U_GRAVE>;
             key-positions = <9 18>;
+            timeout-ms = <80>;
         };
 
         combo_u_umlaut {
             bindings = <&macro_u_umlaut>;
             key-positions = <9 10>;
+            timeout-ms = <80>;
         };
     };
 
