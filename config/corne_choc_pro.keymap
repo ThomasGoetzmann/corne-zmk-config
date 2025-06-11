@@ -42,12 +42,6 @@
             timeout-ms = <80>;
         };
 
-        combo_e_umlaut {
-            bindings = <&macro_e_umlaut>;
-            key-positions = <3 10>;
-            timeout-ms = <80>;
-        };
-
         combo_a_grave {
             bindings = <&kp FR_A_GRAVE>;
             key-positions = <1 23>;
@@ -60,12 +54,6 @@
             timeout-ms = <80>;
         };
 
-        combo_a_umlaut {
-            bindings = <&macro_a_umlaut>;
-            key-positions = <1 10>;
-            timeout-ms = <80>;
-        };
-
         combo_c_cedille {
             bindings = <&kp FR_C_CEDILLA>;
             key-positions = <31 24>;
@@ -75,12 +63,6 @@
         combo_u_grave {
             bindings = <&kp FR_U_GRAVE>;
             key-positions = <9 18>;
-            timeout-ms = <80>;
-        };
-
-        combo_u_umlaut {
-            bindings = <&macro_u_umlaut>;
-            key-positions = <9 10>;
             timeout-ms = <80>;
         };
     };
@@ -123,25 +105,11 @@
             label = "fr_e_circonflex";
         };
 
-        macro_e_umlaut: fr_e_umlaut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FR_UMLAUT &kp FR_E>;
-            label = "FR_E_UMLAUT";
-        };
-
         macro_a_circonflex: fr_a_circonflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET &kp FR_A>;
             label = "FR_A_CIRCONFLEX";
-        };
-
-        macro_a_umlaut: fr_a_umlaut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FR_UMLAUT &kp FR_A>;
-            label = "FR_A_UMLAUT";
         };
 
         macro_i_circonflex: macro_i_circonflex {
@@ -151,13 +119,6 @@
             label = "MACRO_I_CIRCONFLEX";
         };
 
-        macro_i_umlaut: macro_i_umlaut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FR_UMLAUT &kp FR_I>;
-            label = "MACRO_I_UMLAUT";
-        };
-
         macro_o_circonflex: macro_o_circonflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -165,25 +126,11 @@
             label = "MACRO_O_CIRCONFLEX";
         };
 
-        macro_o_umlaut: macro_o_umlaut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FR_UMLAUT &kp FR_O>;
-            label = "MACRO_O_UMLAUT";
-        };
-
         macro_u_circonflex: macro_u_circonflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET &kp FR_U>;
             label = "MACRO_U_CIRCONFLEX";
-        };
-
-        macro_u_umlaut: macro_u_umlaut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FR_UMLAUT &kp FR_U>;
-            label = "MACRO_U_UMLAUT";
         };
     };
 
@@ -206,7 +153,7 @@
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6   &trans  &trans  &kp FR_PLUS   &kp FR_N7       &kp FR_N8   &kp FR_N9  &kp FR_STAR   &kp BSPC
 &kp F7  &kp F8  &kp F9  &kp F10  &mt LS(LGUI) F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mt LALT FR_N4  &kp FR_N5   &kp FR_N6  &kp FR_SLASH  &kp FR_PERCENT
 &none   &none   &none   &none    &none             &none                    &kp FR_EQUAL  &kp FR_N1       &kp FR_N2   &kp FR_N3  &kp FR_LPAR   &kp FR_RPAR
-                        &trans   &none             &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
+                        &trans   &trans            &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
             >;
         };
 
@@ -216,7 +163,7 @@
 &none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &kp FR_UMLAUT  &trans  &trans  &kp FR_DQT  &kp FR_LBKT  &kp FR_RBKT  &kp FR_FSLH  &kp FR_BSLH  &kp BSPC
 &trans  &none      &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &kp FR_CARET   &trans  &trans  &kp FR_SQT  &kp FR_LPAR  &kp FR_RPAR  &kp FR_LT    &kp FR_GT    &kp FR_PERCENT
 &trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &kp GRAVE   &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp FR_TILDE
-                                  &none              &trans        &trans                         &trans      &trans       &none
+                                  &trans             &trans        &trans                         &trans      &trans       &trans
             >;
         };
 
@@ -236,7 +183,7 @@
 &trans  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &rgb_ug RGB_COLOR_HSB(208,100,38)  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &ind_bat
 &none   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &rgb_ug RGB_COLOR_HSB(128,95,24)   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &ind_con
 &none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none            &none            &none
-                                       &none         &none         &none                         &none                              &bt BT_CLR       &none
+                                       &trans        &trans        &none                         &trans                             &bt BT_CLR       &trans
             >;
         };
     };
