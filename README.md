@@ -9,6 +9,8 @@
 
 ## My layout 
 
+Change the layout with the [online keymap editor](https://nickcoutsos.github.io/keymap-editor/)
+
 ![My french keymap 42 keys](./my_keymap.svg)
 
 Keymap draw with https://keymap-drawer.streamlit.app/
