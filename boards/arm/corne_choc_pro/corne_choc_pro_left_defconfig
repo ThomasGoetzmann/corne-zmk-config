@@ -52,8 +52,5 @@ CONFIG_RGBLED_WIDGET_BATTERY_LEVEL_CRITICAL=8
 # Windows Battery Reporting Fix
 CONFIG_BT_GATT_ENFORCE_SUBSCRIPTION=n
 
-# Enable ZMK Studio (alpha)
-CONFIG_ZMK_STUDIO=y
-
 # Improved connection stability
 CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
