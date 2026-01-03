@@ -69,18 +69,6 @@
     col-offset = <7>;
 };
 
-&five_col_transform {
-    col-offset = <7>;
-};
-
-&right_ex1_encoder {
-    status = "okay";
-};
-
-&right_ex2_encoder {
-    status = "okay";
-};
-
 &pinctrl {
     i2c1_default: i2c1_default {
         group1 {
