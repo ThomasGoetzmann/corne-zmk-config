@@ -182,13 +182,6 @@
             bindings = <&kp FR_CARET &kp FR_U>;
             label = "MACRO_U_CIRCONFLEX";
         };
-
-        macro_grave: macro_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FR_GRAVE &kp SPACE>;
-            label = "MACRO_GRAVE";
-        };
     };
 
     keymap {
@@ -219,7 +212,7 @@
             bindings = <
 &none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &kp FR_UMLAUT  &trans  &trans  &kp FR_DQT    &kp FR_LBKT  &kp FR_RBKT  &kp FR_FSLH  &kp FR_BSLH  &kp BSPC
 &trans  &none      &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &kp FR_CARET   &trans  &trans  &kp FR_SQT    &kp FR_LPAR  &kp FR_RPAR  &kp FR_LT    &kp FR_GT    &kp FR_PERCENT
-&trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &macro_grave  &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp FR_TILDE
+&trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &kp FR_GRAVE  &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp FR_TILDE
                                   &trans             &trans        &trans                         &trans        &trans       &trans
             >;
         };
@@ -237,10 +230,10 @@
         system {
             display-name = "system";
             bindings = <
-&trans  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none           &none  &none  &rgb_ug RGB_COLOR_HSB(208,100,38)  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &ind_bat
-&none   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &none  &none  &rgb_ug RGB_COLOR_HSB(128,95,24)   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &ind_con
-&none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &none                         &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none            &none            &none
-                                       &trans        &trans        &none                         &trans                             &bt BT_CLR       &trans
+&trans  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none       &none  &none  &rgb_ug RGB_COLOR_HSB(208,100,38)  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &ind_bat
+&none   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none  &none  &rgb_ug RGB_COLOR_HSB(128,95,24)   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &ind_con
+&none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &none                     &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none            &none            &none
+                                       &trans        &trans        &none                     &trans                             &bt BT_CLR       &trans
             >;
         };
     };
