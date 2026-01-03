@@ -22,6 +22,7 @@
             key-positions = <19 22>;
             layers = <0>;
             timeout-ms = <80>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_e_grave {
@@ -69,51 +70,61 @@
         combo_left_parenthesis {
             bindings = <&kp FR_LEFT_PARENTHESIS>;
             key-positions = <19 18>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_right_parenthesis {
             bindings = <&kp FR_RIGHT_PARENTHESIS>;
             key-positions = <23 24>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_right_bracket {
             bindings = <&kp FR_RIGHT_BRACKET>;
             key-positions = <9 10>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_left_bracket {
             bindings = <&kp FR_LEFT_BRACKET>;
             key-positions = <4 3>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_left_brace {
             bindings = <&kp FR_LEFT_BRACE>;
             key-positions = <32 31>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_right_brace {
             bindings = <&kp FR_RIGHT_BRACE>;
             key-positions = <35 36>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_greater_than {
             bindings = <&kp FR_GREATER_THAN>;
             key-positions = <24 25>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_less_than {
             bindings = <&kp FR_LESS_THAN>;
             key-positions = <17 16>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_backslash {
             bindings = <&kp FR_BACKSLASH>;
             key-positions = <10 11>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_slash {
             bindings = <&kp FR_SLASH>;
             key-positions = <3 2>;
+            require-prior-idle-ms = <150>;
         };
     };
 
