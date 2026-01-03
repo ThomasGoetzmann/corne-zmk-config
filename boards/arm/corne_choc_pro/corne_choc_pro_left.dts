@@ -65,14 +65,6 @@
     };
 };
 
-&left_ex1_encoder {
-    status = "okay";
-};
-
-&left_ex2_encoder {
-    status = "okay";
-};
-
 &pinctrl {
     i2c1_default: i2c1_default {
         group1 {
