@@ -69,7 +69,7 @@
 
         combo_left_parenthesis {
             bindings = <&kp FR_LEFT_PARENTHESIS>;
-            key-positions = <19 18>;
+            key-positions = <18 17>;
             require-prior-idle-ms = <150>;
         };
 
