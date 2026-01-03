@@ -107,5 +107,34 @@
             ]
         }
     },
-    "sensors": []
+    "sensors": [
+        {
+            "ref": "left_encoder_ex1",
+            "name": "encoder_left_ex1",
+            "identifier": "encoder_left_ex1",
+            "compatible": "alps,ec11",
+            "label": "LEFT_ENCODER_EX1"
+        },
+        {
+            "ref": "left_encoder_ex2",
+            "name": "encoder_left_ex2",
+            "identifier": "encoder_left_ex2",
+            "compatible": "alps,ec11",
+            "label": "LEFT_ENCODER_EX2"
+        },
+        {
+            "ref": "right_encoder_ex1",
+            "name": "encoder_right_ex1",
+            "identifier": "encoder_right_ex1",
+            "compatible": "alps,ec11",
+            "label": "RIGHT_ENCODER_EX1"
+        },
+        {
+            "ref": "right_encoder_ex2",
+            "name": "encoder_right_ex2",
+            "identifier": "encoder_right_ex2",
+            "compatible": "alps,ec11",
+            "label": "RIGHT_ENCODER_EX2"
+        }
+    ]
 }
