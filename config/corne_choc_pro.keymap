@@ -95,6 +95,26 @@
             bindings = <&kp FR_RIGHT_BRACE>;
             key-positions = <35 36>;
         };
+
+        combo_greater_than {
+            bindings = <&kp FR_GREATER_THAN>;
+            key-positions = <24 25>;
+        };
+
+        combo_less_than {
+            bindings = <&kp FR_LESS_THAN>;
+            key-positions = <17 16>;
+        };
+
+        combo_backslash {
+            bindings = <&kp FR_BACKSLASH>;
+            key-positions = <10 11>;
+        };
+
+        combo_slash {
+            bindings = <&kp FR_SLASH>;
+            key-positions = <3 2>;
+        };
     };
 
     behaviors {
@@ -162,6 +182,13 @@
             bindings = <&kp FR_CARET &kp FR_U>;
             label = "MACRO_U_CIRCONFLEX";
         };
+
+        macro_grave: macro_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_GRAVE &kp SPACE>;
+            label = "MACRO_GRAVE";
+        };
     };
 
     keymap {
@@ -190,10 +217,10 @@
         symbols {
             display-name = "symbols";
             bindings = <
-&none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &kp FR_UMLAUT  &trans  &trans  &kp FR_DQT  &kp FR_LBKT  &kp FR_RBKT  &kp FR_FSLH  &kp FR_BSLH  &kp BSPC
-&trans  &none      &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &kp FR_CARET   &trans  &trans  &kp FR_SQT  &kp FR_LPAR  &kp FR_RPAR  &kp FR_LT    &kp FR_GT    &kp FR_PERCENT
-&trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &kp GRAVE   &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp FR_TILDE
-                                  &trans             &trans        &trans                         &trans      &trans       &trans
+&none   &kp FR_AT  &none          &kp FR_EURO        &kp FR_PLUS   &kp FR_UMLAUT  &trans  &trans  &kp FR_DQT    &kp FR_LBKT  &kp FR_RBKT  &kp FR_FSLH  &kp FR_BSLH  &kp BSPC
+&trans  &none      &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &kp FR_CARET   &trans  &trans  &kp FR_SQT    &kp FR_LPAR  &kp FR_RPAR  &kp FR_LT    &kp FR_GT    &kp FR_PERCENT
+&trans  &none      &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &macro_grave  &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp FR_TILDE
+                                  &trans             &trans        &trans                         &trans        &trans       &trans
             >;
         };
 
