@@ -65,6 +65,36 @@
             key-positions = <9 18>;
             timeout-ms = <80>;
         };
+
+        combo_left_parenthesis {
+            bindings = <&kp FR_LEFT_PARENTHESIS>;
+            key-positions = <19 18>;
+        };
+
+        combo_right_parenthesis {
+            bindings = <&kp FR_RIGHT_PARENTHESIS>;
+            key-positions = <23 24>;
+        };
+
+        combo_right_bracket {
+            bindings = <&kp FR_RIGHT_BRACKET>;
+            key-positions = <9 10>;
+        };
+
+        combo_left_bracket {
+            bindings = <&kp FR_LEFT_BRACKET>;
+            key-positions = <4 3>;
+        };
+
+        combo_left_brace {
+            bindings = <&kp FR_LEFT_BRACE>;
+            key-positions = <32 31>;
+        };
+
+        combo_right_brace {
+            bindings = <&kp FR_RIGHT_BRACE>;
+            key-positions = <35 36>;
+        };
     };
 
     behaviors {
