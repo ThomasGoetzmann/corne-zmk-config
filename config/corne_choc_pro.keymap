@@ -5,7 +5,6 @@
  */
 
 #include "keys_fr.h"
-#include <behaviors/rgbled_widget.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -161,6 +160,14 @@
     };
 
     macros {
+        bat_pulse: bat_pulse {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <1000>;
+            tap-ms = <5>;
+            bindings = <&rgb_ug RGB_ON &rgb_ug RGB_OFF>;
+        };
+
         macro_e_circonflex: fr_e_circonflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -238,8 +245,8 @@
         system {
             display-name = "system";
             bindings = <
-&trans  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none       &none  &none  &msc SCRL_UP    &none           &mmv MOVE_UP    &none            &none  &ind_bat
-&none   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &ind_con
+&trans  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none       &none  &none  &msc SCRL_UP    &none           &mmv MOVE_UP    &none            &none  &bat_pulse
+&none   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
 &none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &none                     &none           &none           &none           &none            &none  &none
                                        &trans        &trans        &none                     &mkp LCLK       &mkp RCLK       &trans
             >;
