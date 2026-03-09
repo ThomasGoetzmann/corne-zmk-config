@@ -9,6 +9,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -135,28 +137,24 @@
     behaviors {
         td_numbers: tapdance1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "numbers";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&tog 1>;
         };
 
         td_symbols: tapdance2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "symbols";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 2>;
         };
 
         td_arrows: tapdance3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "arrows";
             #binding-cells = <0>;
             bindings = <&mo 3>, <&tog 3>;
         };
 
         td_system: tapdance4 {
             compatible = "zmk,behavior-tap-dance";
-            label = "system";
             #binding-cells = <0>;
             bindings = <&mo 4>, <&tog 4>;
         };
@@ -167,35 +165,30 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET &kp FR_E>;
-            label = "fr_e_circonflex";
         };
 
         macro_a_circonflex: fr_a_circonflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET &kp FR_A>;
-            label = "FR_A_CIRCONFLEX";
         };
 
         macro_i_circonflex: macro_i_circonflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET &kp FR_I>;
-            label = "MACRO_I_CIRCONFLEX";
         };
 
         macro_o_circonflex: macro_o_circonflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET &kp FR_O>;
-            label = "MACRO_O_CIRCONFLEX";
         };
 
         macro_u_circonflex: macro_u_circonflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET &kp FR_U>;
-            label = "MACRO_U_CIRCONFLEX";
         };
     };
 
