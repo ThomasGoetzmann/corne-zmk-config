@@ -1,0 +1,27 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: |
+  Battery-dependent RGB underglow pulse.
+  Turns on the underglow for pulse-ms in a color reflecting the battery level:
+    green  if level > high-threshold (default 40%)
+    yellow if level > low-threshold  (default 20%)
+    red    otherwise
+
+compatible: "zmk,behavior-bat-rgb"
+
+include: zero_param.yaml
+
+properties:
+  high-threshold:
+    type: int
+    default: 40
+    description: Battery % above which green is shown
+  low-threshold:
+    type: int
+    default: 20
+    description: Battery % below which red is shown (yellow in between)
+  pulse-ms:
+    type: int
+    default: 1000
+    description: Duration of the RGB pulse in milliseconds
