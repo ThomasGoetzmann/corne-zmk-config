@@ -47,6 +47,7 @@ static int on_keymap_binding_pressed(struct zmk_behavior_binding *binding,
         color = (struct zmk_led_hsb){.h = 0, .s = 100, .b = 100};   /* red    */
     }
 
+    zmk_rgb_underglow_select_effect(0); /* force solid */
     zmk_rgb_underglow_on();
     zmk_rgb_underglow_set_hsb(color);
     k_work_reschedule(&bat_rgb_off_work, K_MSEC(cfg->pulse_ms));
