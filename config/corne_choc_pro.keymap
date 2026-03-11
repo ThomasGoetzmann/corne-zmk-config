@@ -5,11 +5,13 @@
  */
 
 #include "keys_fr.h"
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -204,7 +206,7 @@
             bindings = <
 &mo 4      &kp FR_A       &kp FR_Z         &kp FR_E       &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U            &kp FR_I          &kp FR_O             &kp FR_P          &kp DEL
 &kp TAB    &mt LALT FR_Q  &mt LSHIFT FR_S  &mt LGUI FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LGUI  &kp RCTRL   &kp FR_H  &kp FR_J            &kp FR_K          &kp FR_L             &kp FR_M          &kp FR_DOLLAR
-&sk LSHFT  &kp FR_W       &kp FR_X         &kp FR_C       &kp FR_V        &kp FR_B                         &kp FR_N  &mt LCTRL FR_COMMA  &mt LGUI FR_SEMI  &mt LSHIFT FR_COLON  &mt LALT FR_EXCL  &kp FR_STAR
+&sk LSHFT  &kp FR_W       &kp FR_X         &kp FR_C       &kp FR_V        &kp FR_B                         &kp FR_N  &mt LCTRL FR_COMMA  &mt LGUI FR_SEMI  &mt LSHIFT FR_COLON  &mt LALT FR_EXCL  &mt GLOBE FR_STAR
                                            &mo 1          &mo 2           &kp SPACE                        &kp RET   &kp BSPC            &mo 3
             >;
         };
