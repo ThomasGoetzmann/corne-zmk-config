@@ -135,6 +135,11 @@
             key-positions = <3 2>;
             require-prior-idle-ms = <150>;
         };
+
+        combo_question {
+            bindings = <&kp FR_QUESTION>;
+            key-positions = <16 35>;
+        };
     };
 
     behaviors {
