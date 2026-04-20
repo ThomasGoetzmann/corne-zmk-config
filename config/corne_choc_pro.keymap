@@ -247,7 +247,7 @@
             wait-ms = <0>;
             tap-ms = <5>;
             bindings =
-                <&rgb_ug RGB_COLOR_HSB(120,100,50)>,
+                <&rgb_ug RGB_COLOR_HSB(60,100,50)>,
                 <&rgb_ug RGB_ON>,
                 <&macro_wait_time 300>,
                 <&rgb_ug RGB_OFF>,
@@ -262,7 +262,7 @@
             wait-ms = <0>;
             tap-ms = <5>;
             bindings =
-                <&rgb_ug RGB_COLOR_HSB(240,100,50)>,
+                <&rgb_ug RGB_COLOR_HSB(270,100,50)>,
                 <&rgb_ug RGB_ON>,
                 <&macro_wait_time 300>,
                 <&rgb_ug RGB_OFF>,
