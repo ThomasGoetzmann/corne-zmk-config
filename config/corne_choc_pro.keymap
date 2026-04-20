@@ -249,7 +249,7 @@
             bindings =
                 <&rgb_ug RGB_COLOR_HSB(200,100,100)>,
                 <&rgb_ug RGB_ON>,
-                <&macro_wait_time 400>,
+                <&macro_wait_time 2000>,
                 <&rgb_ug RGB_OFF>,
                 <&macro_wait_time 0>,
                 <&tog 5>;
@@ -263,7 +263,7 @@
             bindings =
                 <&rgb_ug RGB_COLOR_HSB(270,100,100)>,
                 <&rgb_ug RGB_ON>,
-                <&macro_wait_time 400>,
+                <&macro_wait_time 2000>,
                 <&rgb_ug RGB_OFF>,
                 <&macro_wait_time 0>,
                 <&tog 5>;
