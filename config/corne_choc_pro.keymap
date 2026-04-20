@@ -249,13 +249,13 @@
         macro_mac_on: macro_mac_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb 200>, <&tog 5>;
+            bindings = <&mode_rgb 200>, <&to 5>;
         };
 
         macro_mac_off: macro_mac_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb 270>, <&tog 5>;
+            bindings = <&mode_rgb 270>, <&to 0>;
         };
     };
 
