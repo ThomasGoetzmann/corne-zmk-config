@@ -333,7 +333,7 @@
             tapping-term-ms = <190>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <150>;
-            bindings = <&kp LCTRL>, <&qw_comma_qmark>;
+            bindings = <&kp LCTRL &qw_comma_qmark>;
         };
     };
 
