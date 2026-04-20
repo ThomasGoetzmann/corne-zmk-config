@@ -241,18 +241,34 @@
             bindings = <&kp FR_CARET &kp FR_U>;
         };
 
-        macro_mac_toggle: macro_mac_toggle {
+        macro_mac_on: macro_mac_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <5>;
             bindings =
-                <&rgb_ug RGB_COLOR_HSB(60,100,100)>,
+                <&rgb_ug RGB_COLOR_HSB(200,100,100)>,
                 <&rgb_ug RGB_ON>,
                 <&macro_wait_time 400>,
                 <&rgb_ug RGB_OFF>,
                 <&macro_wait_time 0>,
-                <&tog 5>;
+                <&tog 5>,
+                <&bat_rgb>;
+        };
+
+        macro_mac_off: macro_mac_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings =
+                <&rgb_ug RGB_COLOR_HSB(270,100,100)>,
+                <&rgb_ug RGB_ON>,
+                <&macro_wait_time 400>,
+                <&rgb_ug RGB_OFF>,
+                <&macro_wait_time 0>,
+                <&tog 5>,
+                <&bat_rgb>;
         };
     };
 
@@ -304,7 +320,7 @@
             bindings = <
 &trans  &kp PSCRN     &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none       &none  &none  &msc SCRL_UP    &none           &mmv MOVE_UP    &none            &none  &bat_rgb
 &none   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
-&none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &none                     &none           &none           &none           &none            &none  &macro_mac_toggle
+&none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &none                     &none           &none           &none           &none            &macro_mac_on  &macro_mac_off
                                        &trans        &trans        &none                     &mkp LCLK       &mkp RCLK       &trans
             >;
         };
