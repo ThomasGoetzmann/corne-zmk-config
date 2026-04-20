@@ -8,10 +8,9 @@ description: |
 
 compatible: "zmk,behavior-mode-rgb"
 
+include: one_param.yaml
+
 properties:
-  "#binding-cells":
-    type: int
-    const: 1
   pulse-ms:
     type: int
     default: 1000
