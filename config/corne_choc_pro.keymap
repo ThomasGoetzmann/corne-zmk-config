@@ -310,7 +310,7 @@
         td_arrows: tapdance3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&tog 3>;
+            bindings = <&mo 9>, <&tog 9>;
         };
 
         td_system: tapdance4 {
@@ -448,7 +448,7 @@
 &mo 4      &kp FR_A       &kp FR_Z         &kp FR_E       &kp FR_R        &kp FR_T   &kp ESC   &kp RSHIFT  &kp FR_Y  &kp FR_U            &kp FR_I          &kp FR_O             &kp FR_P          &kp DEL
 &kp TAB    &mt LALT FR_Q  &mt LSHIFT FR_S  &mt LGUI FR_D  &mt LCTRL FR_F  &kp FR_G   &kp LGUI  &kp RCTRL   &kp FR_H  &kp FR_J            &kp FR_K          &kp FR_L             &kp FR_M          &kp FR_DOLLAR
 &sk LSHFT  &kp FR_W       &kp FR_X         &kp FR_C       &kp FR_V        &kp FR_B                         &kp FR_N  &mt LCTRL FR_COMMA  &mt LGUI FR_SEMI  &mt LSHIFT FR_COLON  &mt LALT FR_EXCL  &mt GLOBE FR_STAR
-                                           &mo 1          &mo 2           &kp SPACE                        &kp RET   &kp BSPC            &mo 3
+                                           &mo 1          &mo 2           &kp SPACE                        &kp RET   &kp BSPC            &mo 9
             >;
         };
 
@@ -472,13 +472,13 @@
             >;
         };
 
-        arrows {
-            display-name = "arrows";
+        arrows_placeholder {
+            /* placeholder to keep system at layer 4 — arrows moved to layer 9 */
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4            &kp F5          &kp F6   &trans  &trans  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
-&kp F7  &kp F8  &kp F9  &kp F10           &kp F11         &kp F12  &trans  &trans  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
-&trans  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none                    &none        &none     &none     &none      &none  &none
-                        &kp LALT          &kp LEFT_ALT    &trans                   &trans       &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
 
@@ -498,7 +498,7 @@
 &mo 8      &kp A         &kp Z          &kp E         &kp R          &kp T    &kp ESC   &kp RSHIFT  &kp Y  &kp U            &kp I            &kp O             &kp P            &kp DEL
 &kp TAB    &mt LALT Q    &mt LSHIFT S   &mt LGUI D    &mt LCTRL F    &kp G    &kp LGUI  &kp RCTRL   &kp H  &kp J            &kp K             &kp L             &kp M            &kp DOLLAR
 &sk LSHFT  &kp W         &kp X          &kp C         &kp V          &kp B                         &kp N  &qw_ctrl_comma   &mt LGUI SEMI    &mt LSHIFT COLON  &mt LALT EXCL    &mt GLOBE ASTRK
-                                        &mo 6         &mo 7          &kp SPACE                     &kp RET  &kp BSPC        &mo 3
+                                        &mo 6         &mo 7          &kp SPACE                     &kp RET  &kp BSPC        &mo 9
             >;
         };
 
@@ -529,6 +529,16 @@
 &none   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
 &none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &none                     &none           &none           &none           &none            &none  &macro_to_azerty
                                        &trans        &trans        &none                     &mkp LCLK       &mkp RCLK       &trans
+            >;
+        };
+
+        arrows {
+            display-name = "arrows";
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4            &kp F5          &kp F6   &trans  &trans  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
+&kp F7  &kp F8  &kp F9  &kp F10           &kp F11         &kp F12  &trans  &trans  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
+&trans  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none                    &none        &none     &none     &none      &none  &none
+                        &kp LALT          &kp LEFT_ALT    &trans                   &trans       &trans    &trans
             >;
         };
     };
