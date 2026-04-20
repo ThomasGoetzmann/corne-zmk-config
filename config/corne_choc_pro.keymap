@@ -252,8 +252,7 @@
                 <&macro_wait_time 400>,
                 <&rgb_ug RGB_OFF>,
                 <&macro_wait_time 0>,
-                <&tog 5>,
-                <&bat_rgb>;
+                <&tog 5>;
         };
 
         macro_mac_off: macro_mac_off {
@@ -267,8 +266,7 @@
                 <&macro_wait_time 400>,
                 <&rgb_ug RGB_OFF>,
                 <&macro_wait_time 0>,
-                <&tog 5>,
-                <&bat_rgb>;
+                <&tog 5>;
         };
     };
 
