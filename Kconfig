@@ -2,3 +2,8 @@ config ZMK_BEHAVIOR_BAT_RGB
     bool
     default y
     depends on ZMK_RGB_UNDERGLOW && ZMK_BATTERY_REPORTING
+
+config ZMK_BEHAVIOR_MODE_RGB
+    bool
+    default y
+    depends on ZMK_RGB_UNDERGLOW

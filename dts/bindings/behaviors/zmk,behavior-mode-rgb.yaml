@@ -1,0 +1,18 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: |
+  Fixed-color RGB underglow pulse for mode indication.
+  Takes a single HSB hue value (0-359); saturation and brightness are always 100.
+  The pulse duration is controlled by pulse-ms (default 1000 ms, same as bat_rgb).
+
+compatible: "zmk,behavior-mode-rgb"
+
+properties:
+  "#binding-cells":
+    type: int
+    const: 1
+  pulse-ms:
+    type: int
+    default: 1000
+    description: Duration of the RGB pulse in milliseconds

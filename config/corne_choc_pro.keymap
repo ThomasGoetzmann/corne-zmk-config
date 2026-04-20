@@ -184,6 +184,11 @@
             #binding-cells = <0>;
         };
 
+        mode_rgb: mode_rgb {
+            compatible = "zmk,behavior-mode-rgb";
+            #binding-cells = <1>;
+        };
+
         td_numbers: tapdance1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -244,29 +249,13 @@
         macro_mac_on: macro_mac_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <5>;
-            bindings =
-                <&rgb_ug RGB_COLOR_HSB(200,100,100)>,
-                <&rgb_ug RGB_ON>,
-                <&macro_wait_time 2000>,
-                <&rgb_ug RGB_OFF>,
-                <&macro_wait_time 0>,
-                <&tog 5>;
+            bindings = <&mode_rgb 200>, <&tog 5>;
         };
 
         macro_mac_off: macro_mac_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <5>;
-            bindings =
-                <&rgb_ug RGB_COLOR_HSB(270,100,100)>,
-                <&rgb_ug RGB_ON>,
-                <&macro_wait_time 2000>,
-                <&rgb_ug RGB_OFF>,
-                <&macro_wait_time 0>,
-                <&tog 5>;
+            bindings = <&mode_rgb 270>, <&tog 5>;
         };
     };
 
