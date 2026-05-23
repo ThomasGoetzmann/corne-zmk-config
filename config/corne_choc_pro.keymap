@@ -213,6 +213,20 @@
             bindings = <&mo 4>, <&tog 4>;
         };
 
+        /* mod_morph for numbers 1–9 on the numbers layer.
+           - Default tap: FR_Nx (LS-wrapped) → AZERTY digit, and LALT+FR_Nx → AeroSpace alt-shift-N ✓
+           - With LGUI/RGUI held: plain Nx (no shift) → Hyprland SUPER+code:10–18 workspace switch ✓
+           keep-mods preserves LGUI so it reaches the compositor. */
+        mm_n1: mm_n1 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N1>, <&kp N1>; mods = <(MOD_LGUI|MOD_RGUI)>; keep-mods = <(MOD_LGUI|MOD_RGUI)>; };
+        mm_n2: mm_n2 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N2>, <&kp N2>; mods = <(MOD_LGUI|MOD_RGUI)>; keep-mods = <(MOD_LGUI|MOD_RGUI)>; };
+        mm_n3: mm_n3 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N3>, <&kp N3>; mods = <(MOD_LGUI|MOD_RGUI)>; keep-mods = <(MOD_LGUI|MOD_RGUI)>; };
+        mm_n4: mm_n4 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&mt LALT FR_N4>, <&kp N4>; mods = <(MOD_LGUI|MOD_RGUI)>; keep-mods = <(MOD_LGUI|MOD_RGUI)>; };
+        mm_n5: mm_n5 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N5>, <&kp N5>; mods = <(MOD_LGUI|MOD_RGUI)>; keep-mods = <(MOD_LGUI|MOD_RGUI)>; };
+        mm_n6: mm_n6 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N6>, <&kp N6>; mods = <(MOD_LGUI|MOD_RGUI)>; keep-mods = <(MOD_LGUI|MOD_RGUI)>; };
+        mm_n7: mm_n7 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N7>, <&kp N7>; mods = <(MOD_LGUI|MOD_RGUI)>; keep-mods = <(MOD_LGUI|MOD_RGUI)>; };
+        mm_n8: mm_n8 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N8>, <&kp N8>; mods = <(MOD_LGUI|MOD_RGUI)>; keep-mods = <(MOD_LGUI|MOD_RGUI)>; };
+        mm_n9: mm_n9 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N9>, <&kp N9>; mods = <(MOD_LGUI|MOD_RGUI)>; keep-mods = <(MOD_LGUI|MOD_RGUI)>; };
+
     };
 
     macros {
@@ -275,9 +289,9 @@
         numbers {
             display-name = "numbers";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6   &trans  &trans  &kp FR_PLUS   &kp FR_N7       &kp FR_N8   &kp FR_N9  &kp FR_STAR   &kp BSPC
-&kp F7  &kp F8  &kp F9  &kp F10  &mt LS(LGUI) F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mt LALT FR_N4  &kp FR_N5   &kp FR_N6  &kp FR_SLASH  &kp FR_PERCENT
-&none   &none   &none   &none    &none             &none                    &kp FR_EQUAL  &kp FR_N1       &kp FR_N2   &kp FR_N3  &kp FR_LPAR   &kp FR_RPAR
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6   &trans  &trans  &kp FR_PLUS   &mm_n7          &mm_n8      &mm_n9     &kp FR_STAR   &kp BSPC
+&kp F7  &kp F8  &kp F9  &kp F10  &mt LS(LGUI) F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mm_n4          &mm_n5      &mm_n6     &kp FR_SLASH  &kp FR_PERCENT
+&none   &none   &none   &none    &none             &none                    &kp FR_EQUAL  &mm_n1          &mm_n2      &mm_n3     &kp FR_LPAR   &kp FR_RPAR
                         &trans   &trans            &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
             >;
         };
