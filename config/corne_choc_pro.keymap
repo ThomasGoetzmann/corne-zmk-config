@@ -9,13 +9,13 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
-#define HUE_MAC_ON   200
-#define HUE_MAC_OFF  270
-#define HUE_BT_SEL0  240
-#define HUE_BT_SEL1  120
-#define HUE_BT_SEL2   60
-#define HUE_BT_SEL3  300
-#define HUE_DELETE     0
+#define HUE_RED      0
+#define HUE_YELLOW  60
+#define HUE_GREEN  120
+#define HUE_CYAN   200
+#define HUE_BLUE   240
+#define HUE_PURPLE 270
+#define HUE_MAGENTA 300
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -271,49 +271,49 @@
         macro_mac_on: macro_mac_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_MAC_ON>, <&to 5>;
+            bindings = <&mode_rgb HUE_CYAN>, <&to 5>;
         };
 
         macro_mac_off: macro_mac_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_MAC_OFF>, <&to 0>;
+            bindings = <&mode_rgb HUE_PURPLE>, <&to 0>;
         };
 
         macro_bt_sel0: macro_bt_sel0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_BT_SEL0>, <&bt BT_SEL 0>;
+            bindings = <&mode_rgb HUE_BLUE>, <&bt BT_SEL 0>;
         };
 
         macro_bt_sel1: macro_bt_sel1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_BT_SEL1>, <&bt BT_SEL 1>;
+            bindings = <&mode_rgb HUE_GREEN>, <&bt BT_SEL 1>;
         };
 
         macro_bt_sel2: macro_bt_sel2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_BT_SEL2>, <&bt BT_SEL 2>;
+            bindings = <&mode_rgb HUE_YELLOW>, <&bt BT_SEL 2>;
         };
 
         macro_bt_sel3: macro_bt_sel3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_BT_SEL3>, <&bt BT_SEL 3>;
+            bindings = <&mode_rgb HUE_MAGENTA>, <&bt BT_SEL 3>;
         };
 
         macro_bt_clr_all: macro_bt_clr_all {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_DELETE>, <&bt BT_CLR_ALL>;
+            bindings = <&mode_rgb HUE_RED>, <&bt BT_CLR_ALL>;
         };
 
         macro_bt_clr: macro_bt_clr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_DELETE>, <&bt BT_CLR>;
+            bindings = <&mode_rgb HUE_RED>, <&bt BT_CLR>;
         };
     };
 
