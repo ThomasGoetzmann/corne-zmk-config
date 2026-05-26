@@ -301,6 +301,12 @@
             #binding-cells = <0>;
             bindings = <&mode_rgb 0>, <&bt BT_CLR_ALL>;
         };
+
+        macro_bt_clr: macro_bt_clr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mode_rgb 0>, <&bt BT_CLR>;
+        };
     };
 
     keymap {
@@ -350,7 +356,7 @@
             display-name = "system";
             bindings = <
 &trans  &kp PSCRN       &kp C_MUTE       &kp C_VOL_DN    &kp C_VOL_UP    &macro_bt_clr_all  &none  &none  &msc SCRL_UP    &none           &mmv MOVE_UP    &none            &none  &bat_rgb
-&none   &macro_bt_sel0  &macro_bt_sel1   &macro_bt_sel2  &macro_bt_sel3  &bt BT_CLR         &none  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&none   &macro_bt_sel0  &macro_bt_sel1   &macro_bt_sel2  &macro_bt_sel3  &macro_bt_clr      &none  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
 &none   &none         &rgb_ug RGB_TOG  &sys_reset    &bootloader   &none                     &none           &none           &none           &none            &macro_mac_on  &macro_mac_off
                                        &trans        &trans        &none                     &mkp LCLK       &mkp RCLK       &trans
             >;
