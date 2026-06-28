@@ -352,9 +352,9 @@
         };
 
         mac_mode {
-            /* macOS toggle overlay — transparent everywhere except the symbols thumb key,
-               which redirects to mac_symbols (layer 6) instead of symbols (layer 2).
-               This way only the symbols layer is affected; all other keys are untouched. */
+            /* macOS toggle overlay — transparent everywhere except navigation keys.
+               Mac-specific number/symbol variants activate automatically via
+               conditional_layers when layers 1+5 or 2+5 are both on. */
             display-name = "mac";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LEFT)  &trans  &kp LG(RIGHT)  &trans  &trans
