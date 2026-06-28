@@ -220,30 +220,6 @@
             #binding-cells = <1>;
         };
 
-        td_numbers: tapdance1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&tog 1>;
-        };
-
-        td_symbols: tapdance2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&tog 2>;
-        };
-
-        td_arrows: tapdance3 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&mo 3>, <&tog 3>;
-        };
-
-        td_system: tapdance4 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&mo 4>, <&tog 4>;
-        };
-
         /* mod_morph for numbers 1–9 on the numbers layer.
            - Default tap: FR_Nx (LS-wrapped) → AZERTY digit, and LALT+FR_Nx → AeroSpace alt-shift-N ✓
            - With LGUI/RGUI held: plain Nx (no shift) → Hyprland SUPER+code:10–18 workspace switch ✓
