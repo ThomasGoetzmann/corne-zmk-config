@@ -186,6 +186,18 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        sel_arrows_win {
+            if-layers = <3 8>;
+            then-layer = <9>;
+        };
+        sel_arrows_mac {
+            if-layers = <3 5 8>;
+            then-layer = <10>;
+        };
+    };
+
     behaviors {
         bat_rgb: bat_rgb {
             compatible = "zmk,behavior-bat-rgb";
@@ -354,8 +366,8 @@
             display-name = "arrows";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4            &kp F5          &kp F6   &trans  &trans  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
-&kp F7  &kp F8  &kp F9  &kp F10           &kp F11         &kp F12  &trans  &trans  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &kp LCTRL
-&trans  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none                    &none        &none     &none     &none      &none  &none
+&kp F7  &kp F8  &kp F9  &kp F10           &kp F11         &kp F12  &trans  &trans  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &tog 8
+&trans  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none                    &none        &kp LC(LEFT)  &none  &kp LC(RIGHT)  &none  &none
                         &kp LALT          &kp LEFT_ALT    &trans                   &trans       &trans    &trans
             >;
         };
@@ -377,8 +389,8 @@
             display-name = "mac";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LEFT)  &trans  &kp LG(RIGHT)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans         &trans  &kp LALT
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans  &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LA(LEFT)  &trans  &kp LA(RIGHT)  &trans  &trans
                         &mo 7   &mo 6   &trans                  &trans  &trans        &trans
             >;
         };
@@ -404,6 +416,41 @@
 &trans  &none           &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &kp FR_CARET   &trans  &trans  &kp FR_SQT    &kp FR_LPAR  &kp FR_RPAR  &kp GRAVE    &kp LS(GRAVE) &kp FR_PERCENT
 &trans  &none           &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &kp FR_GRAVE  &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp FR_TILDE
                                        &trans             &trans        &trans                         &trans        &trans       &trans
+            >;
+        };
+
+        sel_mode {
+            /* Selection mode flag layer — toggled by position 27 in arrows layer.
+               Transparent everywhere; its presence triggers conditional layers 9/10. */
+            display-name = "sel";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tog 8
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
+            >;
+        };
+
+        sel_arrows {
+            /* Win/Linux selection arrows — auto-activates when layers 3+8 are both on. */
+            display-name = "sel-arr";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(PAGE_UP)  &kp LS(HOME)       &kp LS(UP)    &kp LS(END)        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(PG_DN)    &kp LS(LEFT)       &kp LS(DOWN)  &kp LS(RIGHT)      &trans  &tog 8
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans            &kp LS(LC(LEFT))   &trans        &kp LS(LC(RIGHT))  &trans  &trans
+                        &trans  &trans  &trans                  &trans            &trans             &trans
+            >;
+        };
+
+        sel_arrows_mac {
+            /* macOS selection overrides — auto-activates when layers 3+5+8 are all on.
+               Overrides home/end and word-select from sel_arrows with Mac equivalents. */
+            display-name = "sel-mac";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LG(LEFT))  &trans  &kp LS(LG(RIGHT))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LS(LA(LEFT))   &trans  &kp LS(LA(RIGHT))  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans             &trans
             >;
         };
     };
