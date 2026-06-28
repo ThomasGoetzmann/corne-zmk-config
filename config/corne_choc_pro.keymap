@@ -335,7 +335,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6   &trans  &trans  &kp FR_PLUS   &mm_n7          &mm_n8      &mm_n9     &kp FR_STAR   &kp BSPC
 &kp F7  &kp F8  &kp F9  &kp F10  &mt LS(LGUI) F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mm_n4          &mm_n5      &mm_n6     &kp FR_SLASH  &kp FR_PERCENT
-&sk LSHIFT  &kp LC(FR_Z)  &kp LC(FR_X)  &kp LC(FR_C)   &kp LC(FR_V)   &none            &kp FR_EQUAL  &mm_n1          &mm_n2      &mm_n3     &kp FR_LPAR   &kp FR_RPAR
+&sk LSHIFT  &kp LC(FR_Z)  &kp LC(FR_X)  &kp LC(FR_C)   &kp LC(FR_V)   &kp LC(FR_A)     &kp FR_EQUAL  &mm_n1          &mm_n2      &mm_n3     &kp FR_LPAR   &kp FR_RPAR
                         &trans   &trans            &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
             >;
         };
@@ -354,7 +354,7 @@
             display-name = "arrows";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4            &kp F5          &kp F6   &trans  &trans  &kp PAGE_UP  &kp HOME  &kp UP    &kp END    &none  &none
-&kp F7  &kp F8  &kp F9  &kp F10           &kp F11         &kp F12  &trans  &trans  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
+&kp F7  &kp F8  &kp F9  &kp F10           &kp F11         &kp F12  &trans  &trans  &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &kp LCTRL
 &trans  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none                    &none        &none     &none     &none      &none  &none
                         &kp LALT          &kp LEFT_ALT    &trans                   &trans       &trans    &trans
             >;
@@ -377,7 +377,7 @@
             display-name = "mac";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LEFT)  &trans  &kp LG(RIGHT)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans         &trans  &kp LALT
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans  &trans         &trans  &trans
                         &mo 7   &mo 6   &trans                  &trans  &trans        &trans
             >;
@@ -390,7 +390,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6   &trans  &trans  &kp FR_PLUS   &mm_n7          &mm_n8      &mm_n9     &kp FR_STAR   &kp BSPC
 &kp F7  &kp F8  &kp F9  &kp F10  &mt LS(LGUI) F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mm_n4          &mm_n5      &mm_n6     &kp FR_SLASH  &kp FR_PERCENT
-&sk LSHIFT  &kp LG(FR_Z)  &kp LG(FR_X)  &kp LG(FR_C)   &kp LG(FR_V)   &none            &kp FR_EQUAL  &mm_n1          &mm_n2      &mm_n3     &kp FR_LPAR   &kp FR_RPAR
+&sk LSHIFT  &kp LG(FR_Z)  &kp LG(FR_X)  &kp LG(FR_C)   &kp LG(FR_V)   &kp LG(FR_A)     &kp FR_EQUAL  &mm_n1          &mm_n2      &mm_n3     &kp FR_LPAR   &kp FR_RPAR
                         &trans   &trans            &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
             >;
         };
