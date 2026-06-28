@@ -271,13 +271,13 @@
         macro_mac_on: macro_mac_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_CYAN>, <&to 5>;
+            bindings = <&mode_rgb HUE_RED>, <&to 5>;
         };
 
         macro_mac_off: macro_mac_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mode_rgb HUE_PURPLE>, <&to 0>;
+            bindings = <&mode_rgb HUE_CYAN>, <&to 0>;
         };
 
         macro_bt_sel0: macro_bt_sel0 {
@@ -335,7 +335,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6   &trans  &trans  &kp FR_PLUS   &mm_n7          &mm_n8      &mm_n9     &kp FR_STAR   &kp BSPC
 &kp F7  &kp F8  &kp F9  &kp F10  &mt LS(LGUI) F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mm_n4          &mm_n5      &mm_n6     &kp FR_SLASH  &kp FR_PERCENT
-&none   &none   &none   &none    &none             &none                    &kp FR_EQUAL  &mm_n1          &mm_n2      &mm_n3     &kp FR_LPAR   &kp FR_RPAR
+&sk LSHIFT  &kp LC(FR_Z)  &kp LC(FR_X)  &kp LC(FR_C)   &kp LC(FR_V)   &none            &kp FR_EQUAL  &mm_n1          &mm_n2      &mm_n3     &kp FR_LPAR   &kp FR_RPAR
                         &trans   &trans            &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
             >;
         };
@@ -379,7 +379,19 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mo 6   &trans                  &trans  &trans  &trans
+                        &mo 7   &mo 6   &trans                  &trans  &trans  &trans
+            >;
+        };
+
+        mac_numbers {
+            /* macOS numbers — identical to numbers (layer 1) except clipboard ops use Cmd.
+               Only reachable via mac_mode (layer 5), never directly. */
+            display-name = "mac-num";
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6   &trans  &trans  &kp FR_PLUS   &mm_n7          &mm_n8      &mm_n9     &kp FR_STAR   &kp BSPC
+&kp F7  &kp F8  &kp F9  &kp F10  &mt LS(LGUI) F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mm_n4          &mm_n5      &mm_n6     &kp FR_SLASH  &kp FR_PERCENT
+&sk LSHIFT  &kp LG(FR_Z)  &kp LG(FR_X)  &kp LG(FR_C)   &kp LG(FR_V)   &none            &kp FR_EQUAL  &mm_n1          &mm_n2      &mm_n3     &kp FR_LPAR   &kp FR_RPAR
+                        &trans   &trans            &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
             >;
         };
 
