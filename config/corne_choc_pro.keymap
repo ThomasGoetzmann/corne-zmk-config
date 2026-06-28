@@ -17,6 +17,8 @@
 #define HUE_PURPLE 270
 #define HUE_MAGENTA 300
 
+#define MM_MODS (MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -37,7 +39,7 @@
         combo_esc-with-gh {
             bindings = <&kp ESC>;
             key-positions = <19 22>;
-            layers = <0 5>;
+            layers = <0 5 8 9 10>;
             timeout-ms = <80>;
             require-prior-idle-ms = <150>;
         };
@@ -46,49 +48,49 @@
         combo_e_grave {
             bindings = <&kp FR_E_GRAVE>;
             key-positions = <3 23>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             timeout-ms = <80>;
         };
 
         combo_e_aigu {
             bindings = <&kp FR_E_ACUTE>;
             key-positions = <3 25>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             timeout-ms = <80>;
         };
 
         combo_e_circonflex {
             bindings = <&macro_e_circonflex>;
             key-positions = <3 24>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             timeout-ms = <80>;
         };
 
         combo_a_grave {
             bindings = <&kp FR_A_GRAVE>;
             key-positions = <1 23>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             timeout-ms = <80>;
         };
 
         combo_a_circonflex {
             bindings = <&macro_a_circonflex>;
             key-positions = <1 24>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             timeout-ms = <80>;
         };
 
         combo_c_cedille {
             bindings = <&kp FR_C_CEDILLA>;
             key-positions = <31 24>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             timeout-ms = <80>;
         };
 
         combo_u_grave {
             bindings = <&kp FR_U_GRAVE>;
             key-positions = <9 18>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             timeout-ms = <80>;
         };
 
@@ -96,42 +98,42 @@
         combo_left_parenthesis {
             bindings = <&kp FR_LEFT_PARENTHESIS>;
             key-positions = <18 17>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             require-prior-idle-ms = <150>;
         };
 
         combo_right_parenthesis {
             bindings = <&kp FR_RIGHT_PARENTHESIS>;
             key-positions = <23 24>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             require-prior-idle-ms = <150>;
         };
 
         combo_right_bracket {
             bindings = <&kp FR_RIGHT_BRACKET>;
             key-positions = <9 10>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             require-prior-idle-ms = <150>;
         };
 
         combo_left_bracket {
             bindings = <&kp FR_LEFT_BRACKET>;
             key-positions = <4 3>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             require-prior-idle-ms = <150>;
         };
 
         combo_left_brace {
             bindings = <&kp FR_LEFT_BRACE>;
             key-positions = <32 31>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             require-prior-idle-ms = <150>;
         };
 
         combo_right_brace {
             bindings = <&kp FR_RIGHT_BRACE>;
             key-positions = <35 36>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             require-prior-idle-ms = <150>;
         };
 
@@ -139,14 +141,14 @@
         combo_greater_than {
             bindings = <&kp FR_GREATER_THAN>;
             key-positions = <24 25>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 2 3 4 8 9>;
             require-prior-idle-ms = <150>;
         };
 
         combo_less_than {
             bindings = <&kp FR_LESS_THAN>;
             key-positions = <17 16>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 2 3 4 8 9>;
             require-prior-idle-ms = <150>;
         };
 
@@ -154,35 +156,36 @@
         combo_mac_less_than {
             bindings = <&kp GRAVE>;
             key-positions = <17 16>;
-            layers = <5 6>;
+            layers = <5 6 10>;
             require-prior-idle-ms = <150>;
         };
 
         combo_mac_greater_than {
             bindings = <&kp LS(GRAVE)>;
             key-positions = <24 25>;
-            layers = <5 6>;
+            layers = <5 6 10>;
             require-prior-idle-ms = <150>;
         };
 
         combo_backslash {
             bindings = <&kp FR_BACKSLASH>;
             key-positions = <10 11>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             require-prior-idle-ms = <150>;
         };
 
         combo_slash {
             bindings = <&kp FR_SLASH>;
             key-positions = <3 2>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
             require-prior-idle-ms = <150>;
         };
 
         combo_question {
             bindings = <&kp FR_QUESTION>;
             key-positions = <16 35>;
-            layers = <0 1 2 3 4 5 6>;
+            layers = <0 1 2 3 4 5 6 8 9 10>;
+            require-prior-idle-ms = <150>;
         };
     };
 
@@ -195,6 +198,14 @@
         sel_arrows_mac {
             if-layers = <3 5 8>;
             then-layer = <10>;
+        };
+        mac_numbers_overlay {
+            if-layers = <1 5>;
+            then-layer = <7>;
+        };
+        mac_symbols_overlay {
+            if-layers = <2 5>;
+            then-layer = <6>;
         };
     };
 
@@ -237,15 +248,15 @@
            - Default tap: FR_Nx (LS-wrapped) → AZERTY digit, and LALT+FR_Nx → AeroSpace alt-shift-N ✓
            - With LGUI/RGUI held: plain Nx (no shift) → Hyprland SUPER+code:10–18 workspace switch ✓
            keep-mods preserves LGUI so it reaches the compositor. */
-        mm_n1: mm_n1 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N1>, <&kp N1>; mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; };
-        mm_n2: mm_n2 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N2>, <&kp N2>; mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; };
-        mm_n3: mm_n3 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N3>, <&kp N3>; mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; };
-        mm_n4: mm_n4 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&mt LALT FR_N4>, <&kp N4>; mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; };
-        mm_n5: mm_n5 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N5>, <&kp N5>; mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; };
-        mm_n6: mm_n6 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N6>, <&kp N6>; mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; };
-        mm_n7: mm_n7 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N7>, <&kp N7>; mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; };
-        mm_n8: mm_n8 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N8>, <&kp N8>; mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; };
-        mm_n9: mm_n9 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N9>, <&kp N9>; mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>; };
+        mm_n1: mm_n1 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N1>, <&kp N1>; mods = <MM_MODS>; keep-mods = <MM_MODS>; };
+        mm_n2: mm_n2 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N2>, <&kp N2>; mods = <MM_MODS>; keep-mods = <MM_MODS>; };
+        mm_n3: mm_n3 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N3>, <&kp N3>; mods = <MM_MODS>; keep-mods = <MM_MODS>; };
+        mm_n4: mm_n4 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N4>, <&kp N4>; mods = <MM_MODS>; keep-mods = <MM_MODS>; };
+        mm_n5: mm_n5 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N5>, <&kp N5>; mods = <MM_MODS>; keep-mods = <MM_MODS>; };
+        mm_n6: mm_n6 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N6>, <&kp N6>; mods = <MM_MODS>; keep-mods = <MM_MODS>; };
+        mm_n7: mm_n7 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N7>, <&kp N7>; mods = <MM_MODS>; keep-mods = <MM_MODS>; };
+        mm_n8: mm_n8 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N8>, <&kp N8>; mods = <MM_MODS>; keep-mods = <MM_MODS>; };
+        mm_n9: mm_n9 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp FR_N9>, <&kp N9>; mods = <MM_MODS>; keep-mods = <MM_MODS>; };
 
     };
 
@@ -260,24 +271,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET &kp FR_A>;
-        };
-
-        macro_i_circonflex: macro_i_circonflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FR_CARET &kp FR_I>;
-        };
-
-        macro_o_circonflex: macro_o_circonflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FR_CARET &kp FR_O>;
-        };
-
-        macro_u_circonflex: macro_u_circonflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp FR_CARET &kp FR_U>;
         };
 
         macro_mac_on: macro_mac_on {
@@ -391,31 +384,31 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LEFT)  &trans  &kp LG(RIGHT)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans         &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LA(LEFT)  &trans  &kp LA(RIGHT)  &trans  &trans
-                        &mo 7   &mo 6   &trans                  &trans  &trans        &trans
+                        &trans  &trans  &trans                  &trans  &trans        &trans
             >;
         };
 
-        mac_numbers {
-            /* macOS numbers — identical to numbers (layer 1) except clipboard ops use Cmd.
-               Only reachable via mac_mode (layer 5), never directly. */
-            display-name = "mac-num";
+        mac_clipboard {
+            /* macOS clipboard overrides — auto-activates via conditional_layers when
+               numbers (1) + mac_mode (5) are both on. Only the clipboard row differs. */
+            display-name = "mac-clip";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6   &trans  &trans  &kp FR_PLUS   &mm_n7          &mm_n8      &mm_n9     &kp FR_STAR   &kp BSPC
-&kp F7  &kp F8  &kp F9  &kp F10  &mt LS(LGUI) F11  &kp F12  &trans  &trans  &kp FR_MINUS  &mm_n4          &mm_n5      &mm_n6     &kp FR_SLASH  &kp FR_PERCENT
-&sk LSHIFT  &kp LG(FR_Z)  &kp LG(FR_X)  &kp LG(FR_C)   &kp LG(FR_V)   &kp LG(FR_A)     &kp FR_EQUAL  &mm_n1          &mm_n2      &mm_n3     &kp FR_LPAR   &kp FR_RPAR
-                        &trans   &trans            &trans                   &kp KP_ENTER  &kp FR_N0       &kp FR_DOT
+&trans  &trans         &trans         &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans         &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(FR_Z)  &kp LG(FR_X)  &kp LG(FR_C)  &kp LG(FR_V)  &kp LG(FR_A)            &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans         &trans         &trans                  &trans  &trans  &trans
             >;
         };
 
-        mac_symbols {
-            /* macOS symbols — identical to symbols (layer 2) except < and >.
-               Only reachable via mac_mode (layer 5), never directly. */
-            display-name = "mac-sym";
+        mac_lt_gt {
+            /* macOS < > overrides — auto-activates via conditional_layers when
+               symbols (2) + mac_mode (5) are both on. Only < and > differ. */
+            display-name = "mac-ltgt";
             bindings = <
-&none   &kp FR_AT_SIGN  &none          &kp FR_EURO        &kp FR_PLUS   &kp FR_UMLAUT  &trans  &trans  &kp FR_DQT    &kp FR_LBKT  &kp FR_RBKT  &kp FR_FSLH  &kp FR_BSLH  &kp BSPC
-&trans  &none           &kp FR_DOLLAR  &kp FR_UNDERSCORE  &kp FR_MINUS  &kp FR_CARET   &trans  &trans  &kp FR_SQT    &kp FR_LPAR  &kp FR_RPAR  &kp GRAVE    &kp LS(GRAVE) &kp FR_PERCENT
-&trans  &none           &kp FR_STAR    &kp FR_HASH        &kp FR_EQUAL  &none                          &kp FR_GRAVE  &kp FR_LBRC  &kp FR_RBRC  &kp FR_AMPS  &kp FR_PIPE  &kp FR_TILDE
-                                       &trans             &trans        &trans                         &trans        &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp GRAVE       &kp LS(GRAVE) &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans          &trans        &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
 
