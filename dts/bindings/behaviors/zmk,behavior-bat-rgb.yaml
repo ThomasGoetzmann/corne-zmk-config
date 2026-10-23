@@ -2,11 +2,16 @@
 # SPDX-License-Identifier: MIT
 
 description: |
-  Battery-dependent RGB underglow pulse.
-  Turns on the underglow for pulse-ms in a color reflecting the battery level:
+  Battery + output RGB underglow indicator.
+  Shows the battery level for pulse-ms (both halves, each its own battery):
     green  if level > high-threshold (default 40%)
     yellow if level > low-threshold  (default 20%)
     red    otherwise
+  then, on the central half only, goes dark for gap-ms and shows the active
+  output for profile-pulse-ms:
+    USB → solid white
+    BLE → profile-hues[active profile], solid if connected, double blink if
+          paired but not connected, fast flicker if open (unpaired)
 
 compatible: "zmk,behavior-bat-rgb"
 
@@ -24,4 +29,16 @@ properties:
   pulse-ms:
     type: int
     default: 1000
-    description: Duration of the RGB pulse in milliseconds
+    description: Duration of the battery pulse in milliseconds
+  gap-ms:
+    type: int
+    default: 300
+    description: Dark gap between the battery and output pulses in milliseconds
+  profile-pulse-ms:
+    type: int
+    default: 500
+    description: Duration of the output (USB / BLE profile) pulse in milliseconds
+  profile-hues:
+    type: array
+    default: [240, 120, 60, 300, 200]
+    description: Hue (0-359) for each BLE profile index, in order

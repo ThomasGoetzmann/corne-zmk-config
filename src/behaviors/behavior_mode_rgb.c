@@ -25,10 +25,21 @@ static struct k_work_delayable mode_rgb_off_work;
 
 static void mode_rgb_off_cb(struct k_work *work) { zmk_rgb_underglow_off(); }
 
+#if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_BAT_RGB)
+void zmk_bat_rgb_cancel(void);
+#endif
+
+/* Called by bat_rgb so a pending mode pulse can't cut its sequence short. */
+void zmk_mode_rgb_cancel(void) { k_work_cancel_delayable(&mode_rgb_off_work); }
+
 static int on_keymap_binding_pressed(struct zmk_behavior_binding *binding,
                                      struct zmk_behavior_binding_event event) {
     const struct device *dev = zmk_behavior_get_binding(binding->behavior_dev);
     const struct behavior_mode_rgb_config *cfg = dev->config;
+
+#if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_BAT_RGB)
+    zmk_bat_rgb_cancel(); /* mode pulse wins over a running battery sequence */
+#endif
 
     struct zmk_led_hsb color = {
         .h = binding->param1,
