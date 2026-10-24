@@ -520,7 +520,8 @@ layers:
 combos:
 - p: [19, 22]
   k: Esc
-  l: [keys, mac, sel, sel-arr, sel-mac]
+  l: [keys]
+  draw_separate: false
 - p: [3, 23]
   k: è
   l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
@@ -544,28 +545,36 @@ combos:
   l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
 - p: [18, 17]
   k: (
-  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+  l: [keys]
+  draw_separate: false
 - p: [23, 24]
   k: )
-  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+  l: [keys]
+  draw_separate: false
 - p: [9, 10]
   k: ']'
-  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+  l: [keys]
+  draw_separate: false
 - p: [4, 3]
   k: '['
-  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+  l: [keys]
+  draw_separate: false
 - p: [32, 31]
   k: '{'
-  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+  l: [keys]
+  draw_separate: false
 - p: [35, 36]
   k: '}'
-  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+  l: [keys]
+  draw_separate: false
 - p: [24, 25]
   k: '>'
-  l: [keys, numbers, symbols, arrows, system, sel, sel-arr]
+  l: [keys]
+  draw_separate: false
 - p: [17, 16]
   k: <
-  l: [keys, numbers, symbols, arrows, system, sel, sel-arr]
+  l: [keys]
+  draw_separate: false
 - p: [17, 16]
   k: <
   l: [mac, mac-clip, sel-mac]
@@ -576,10 +585,12 @@ combos:
   hidden: true
 - p: [10, 11]
   k: \
-  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+  l: [keys]
+  draw_separate: false
 - p: [3, 2]
   k: /
-  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+  l: [keys]
+  draw_separate: false
 - p: [16, 35]
   k: '?'
   l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]

@@ -191,6 +191,19 @@ parse_config:
     "&mkp RCLK": "Click R"
     "&tog 8": "Sel"
   zmk_combos:
+    # Adjacent-key combos are drawn inline on the base layer only,
+    # the others get separate diagrams (separate_combo_diagrams below)
+    combo_esc-with-gh: {draw_separate: false, l: [keys]}
+    combo_left_parenthesis: {draw_separate: false, l: [keys]}
+    combo_right_parenthesis: {draw_separate: false, l: [keys]}
+    combo_left_bracket: {draw_separate: false, l: [keys]}
+    combo_right_bracket: {draw_separate: false, l: [keys]}
+    combo_left_brace: {draw_separate: false, l: [keys]}
+    combo_right_brace: {draw_separate: false, l: [keys]}
+    combo_less_than: {draw_separate: false, l: [keys]}
+    combo_greater_than: {draw_separate: false, l: [keys]}
+    combo_slash: {draw_separate: false, l: [keys]}
+    combo_backslash: {draw_separate: false, l: [keys]}
     # macOS-only variants, the mac layers are not drawn
     combo_mac_less_than: {hidden: true}
     combo_mac_greater_than: {hidden: true}
