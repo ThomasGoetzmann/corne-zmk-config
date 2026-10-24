@@ -1,0 +1,34 @@
+name: Draw keymap
+on:
+  push:
+    branches: [main]
+    paths:
+      - config/*.keymap
+      - config/keys_fr.h
+      - config/corne_choc_pro.json
+      - keymap_drawer.config.yaml
+      - .github/workflows/draw.yml
+  pull_request:
+    paths:
+      - config/*.keymap
+      - config/keys_fr.h
+      - config/corne_choc_pro.json
+      - keymap_drawer.config.yaml
+      - .github/workflows/draw.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.23.0
+    with:
+      install_version: 0.23.0
+      west_config_path: ""
+      # mac layers (mac, mac-clip, mac-ltgt, sel-mac) are left out on purpose
+      draw_args: "corne_choc_pro:'-s keys numbers symbols arrows system sel sel-arr'"
+      # PRs only get a preview artifact, main gets the drawing committed back
+      destination: ${{ github.event_name == 'pull_request' && 'artifact' || 'commit' }}
+      commit_message: "chore: regenerate keymap drawing [skip ci]"
+      fail_on_error: true

@@ -1,0 +1,596 @@
+layout: {zmk_keyboard: corne_choc_pro}
+layers:
+  keys:
+  - system
+  - A
+  - Z
+  - E
+  - R
+  - T
+  - Esc
+  - Shift
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - ⌦
+  - ⇥
+  - {t: Q, h: Alt}
+  - {t: S, h: Shift}
+  - {t: D, h: Gui}
+  - {t: F, h: Ctrl}
+  - G
+  - Gui
+  - Ctrl
+  - H
+  - J
+  - K
+  - L
+  - M
+  - $
+  - {t: Shift, h: sticky}
+  - W
+  - X
+  - C
+  - V
+  - B
+  - N
+  - {t: ',', h: Ctrl}
+  - {t: ;, h: Gui}
+  - {t: ':', h: Shift}
+  - {t: '!', h: Alt}
+  - {t: '*', h: Globe}
+  - numbers
+  - symbols
+  - ␣
+  - ⏎
+  - ⌫
+  - arrows
+  numbers:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - +
+  - '7'
+  - '8'
+  - '9'
+  - '*'
+  - ⌫
+  - F7
+  - F8
+  - F9
+  - F10
+  - {t: F11, h: Sft+Gui}
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - /
+  - '%'
+  - {t: Shift, h: sticky}
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+A
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - (
+  - )
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⏎
+  - '0'
+  - .
+  symbols:
+  - ''
+  - '@'
+  - ''
+  - €
+  - +
+  - ¨
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '"'
+  - '['
+  - ']'
+  - /
+  - \
+  - ⌫
+  - {t: ▽, type: trans}
+  - ''
+  - $
+  - _
+  - '-'
+  - ^
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''''
+  - (
+  - )
+  - <
+  - '>'
+  - '%'
+  - {t: ▽, type: trans}
+  - ''
+  - '*'
+  - '#'
+  - '='
+  - ''
+  - '`'
+  - '{'
+  - '}'
+  - '&'
+  - '|'
+  - '~'
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  arrows:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PgUp
+  - Home
+  - ↑
+  - End
+  - ''
+  - ''
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PgDn
+  - ←
+  - ↓
+  - →
+  - ''
+  - Sel
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - Ctrl
+  - Shift
+  - ''
+  - ''
+  - Ctl+←
+  - ''
+  - Ctl+→
+  - ''
+  - ''
+  - Alt
+  - Alt
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  system:
+  - {type: held}
+  - PrtSc
+  - Mute
+  - Vol-
+  - Vol+
+  - ''
+  - ''
+  - BT CLR ALL
+  - Scroll ↑
+  - ''
+  - Mouse ↑
+  - ''
+  - ''
+  - Batt
+  - ''
+  - BT 0
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - ''
+  - BT CLR
+  - Scroll ↓
+  - Mouse ←
+  - Mouse ↓
+  - Mouse →
+  - ''
+  - ''
+  - ''
+  - ''
+  - RGB
+  - Reset
+  - Boot
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Mac ON
+  - Mac OFF
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - Click L
+  - Click R
+  - {t: ▽, type: trans}
+  mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+←
+  - {t: ▽, type: trans}
+  - Gui+→
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Alt+←
+  - {t: ▽, type: trans}
+  - Alt+→
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  mac-clip:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+Z
+  - Gui+X
+  - Gui+C
+  - Gui+V
+  - Gui+A
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  mac-ltgt:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - <
+  - '>'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  sel:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sel
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  sel-arr:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+PgUp
+  - Sft+Home
+  - Sft+↑
+  - Sft+End
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+PgDn
+  - Sft+←
+  - Sft+↓
+  - Sft+→
+  - {t: ▽, type: trans}
+  - Sel
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+Ctl+←
+  - {t: ▽, type: trans}
+  - Sft+Ctl+→
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  sel-mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+Gui+←
+  - {t: ▽, type: trans}
+  - Sft+Gui+→
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+Alt+←
+  - {t: ▽, type: trans}
+  - Sft+Alt+→
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+combos:
+- p: [19, 22]
+  k: Esc
+  l: [keys]
+  draw_separate: false
+- p: [3, 23]
+  k: è
+  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+- p: [3, 25]
+  k: é
+  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+- p: [3, 24]
+  k: ê
+  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+- p: [1, 23]
+  k: à
+  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+- p: [1, 24]
+  k: â
+  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+- p: [31, 24]
+  k: ç
+  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+- p: [9, 18]
+  k: ù
+  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
+- p: [18, 17]
+  k: (
+  l: [keys]
+  draw_separate: false
+- p: [23, 24]
+  k: )
+  l: [keys]
+  draw_separate: false
+- p: [9, 10]
+  k: ']'
+  l: [keys]
+  draw_separate: false
+- p: [4, 3]
+  k: '['
+  l: [keys]
+  draw_separate: false
+- p: [32, 31]
+  k: '{'
+  l: [keys]
+  draw_separate: false
+- p: [35, 36]
+  k: '}'
+  l: [keys]
+  draw_separate: false
+- p: [24, 25]
+  k: '>'
+  l: [keys]
+  draw_separate: false
+- p: [17, 16]
+  k: <
+  l: [keys]
+  draw_separate: false
+- p: [17, 16]
+  k: <
+  l: [mac, mac-clip, sel-mac]
+  hidden: true
+- p: [24, 25]
+  k: '>'
+  l: [mac, mac-clip, sel-mac]
+  hidden: true
+- p: [10, 11]
+  k: \
+  l: [keys]
+  draw_separate: false
+- p: [3, 2]
+  k: /
+  l: [keys]
+  draw_separate: false
+- p: [16, 35]
+  k: '?'
+  l: [keys, numbers, symbols, arrows, system, mac, mac-clip, sel, sel-arr, sel-mac]
