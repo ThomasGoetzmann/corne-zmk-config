@@ -9,7 +9,7 @@
 
 ## Building
 
-GitHub Actions builds the firmware on every push that touches the config (download it from the run's artifacts).
+GitHub Actions builds the firmware on every push that changes the config, board or behaviors (download it from the run's artifacts).
 To build on your own machine with podman/docker, see [docs/building-locally.md](docs/building-locally.md).
 
 ## My layout 

@@ -1,17 +1,19 @@
 name: Build ZMK firmware
 on:
+  # Only rebuild when something that ends up in the firmware changes
   push:
-    paths-ignore:
-      - keymap-drawer/**
-      - README.md
-      - docs/**
-      - '*.svg'
+    paths: &firmware
+      - config/**
+      - boards/**
+      - dts/**
+      - src/**
+      - zephyr/**
+      - CMakeLists.txt
+      - Kconfig
+      - build.yaml
+      - .github/workflows/build.yml
   pull_request:
-    paths-ignore:
-      - keymap-drawer/**
-      - README.md
-      - docs/**
-      - '*.svg'
+    paths: *firmware
   workflow_dispatch:
 
 jobs:

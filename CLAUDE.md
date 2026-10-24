@@ -4,7 +4,7 @@ ZMK firmware config for a **Corne Choc Pro BT** (Keebart, nRF52840 M.2 Module) w
 
 ## Build
 
-GitHub Actions builds on every push/PR (`.github/workflows/build.yml` → ZMK reusable workflow, matrix in `build.yaml`). Firmware is downloaded from the Actions run artifacts.
+GitHub Actions builds on push/PR (`.github/workflows/build.yml` → ZMK reusable workflow, matrix in `build.yaml`), only when a firmware-relevant path changes (`paths` allow-list; add new firmware dirs there). Firmware is downloaded from the Actions run artifacts.
 
 ## Where things live
 
