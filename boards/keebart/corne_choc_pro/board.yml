@@ -1,0 +1,13 @@
+boards:
+  - name: corne_choc_pro_left
+    vendor: keebart
+    socs:
+      - name: nrf52840
+        variants:
+          - name: zmk
+  - name: corne_choc_pro_right
+    vendor: keebart
+    socs:
+      - name: nrf52840
+        variants:
+          - name: zmk

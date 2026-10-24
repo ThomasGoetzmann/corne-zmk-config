@@ -7,15 +7,15 @@
 #
 ---
 include:
-  - board: corne_choc_pro_left
+  - board: corne_choc_pro_left//zmk
     snippet: studio-rpc-usb-uart
-  - board: corne_choc_pro_right
-    snippet: studio-rpc-usb-uart
+    artifact-name: corne_choc_pro_left
+  - board: corne_choc_pro_right//zmk
+    artifact-name: corne_choc_pro_right
 
-  - board: corne_choc_pro_left
+  - board: corne_choc_pro_left//zmk
     shield: settings_reset
-    snippet: studio-rpc-usb-uart
-  - board: corne_choc_pro_right
+    artifact-name: settings_reset-corne_choc_pro_left
+  - board: corne_choc_pro_right//zmk
     shield: settings_reset
-    snippet: studio-rpc-usb-uart
-
+    artifact-name: settings_reset-corne_choc_pro_right

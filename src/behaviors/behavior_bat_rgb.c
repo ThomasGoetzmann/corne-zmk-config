@@ -105,7 +105,7 @@ static void add_output_steps(const struct behavior_bat_rgb_config *cfg) {
     const struct zmk_led_hsb off = {0};
     const uint16_t p = cfg->profile_pulse_ms;
 
-    if (zmk_endpoints_selected().transport == ZMK_TRANSPORT_USB) {
+    if (zmk_endpoint_get_selected().transport == ZMK_TRANSPORT_USB) {
         add_step(true, (struct zmk_led_hsb){.h = 0, .s = 0, .b = 100}, p); /* white */
         return;
     }
