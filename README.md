@@ -7,6 +7,11 @@
 - no rotary encoder
 - board: nRF52840 M.2 Module (nrf52840_m2)
 
+## Building
+
+GitHub Actions builds the firmware on every push (download it from the run's artifacts).
+To build on your own machine with podman/docker, see [docs/building-locally.md](docs/building-locally.md).
+
 ## My layout 
 
 Change the layout with the [online keymap editor](https://nickcoutsos.github.io/keymap-editor/)
