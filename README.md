@@ -9,7 +9,7 @@
 
 ## Building
 
-GitHub Actions builds the firmware on every push that changes the config, board or behaviors (download it from the run's artifacts).
+GitHub Actions builds the firmware on every push that changes the config, board or behaviors (download it from the run's artifacts). Docs-only changes (README, `docs/`, the keymap drawing) don't trigger a build; see the `paths` list in `.github/workflows/build.yml`.
 To build on your own machine with podman/docker, see [docs/building-locally.md](docs/building-locally.md).
 
 ## My layout 
